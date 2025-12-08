@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="sunset" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#A855F7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#F97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FB923C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="pool" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:0.9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky -->
+  <rect width="1200" height="500" fill="url(#sunset)"/>
+  
+  <!-- Sun -->
+  <circle cx="950" cy="150" r="80" fill="#FFF7ED" opacity="0.9"/>
+  <circle cx="950" cy="150" r="100" fill="#FFF7ED" opacity="0.3"/>
+  
+  <!-- Mountains -->
+  <path d="M0,400 L200,250 L400,350 L600,200 L800,300 L1000,220 L1200,340 L1200,800 L0,800 Z" 
+        fill="#1E293B" opacity="0.6"/>
+  
+  <!-- Pool deck -->
+  <rect x="0" y="500" width="1200" height="300" fill="#78350F"/>
+  
+  <!-- Pool water -->
+  <ellipse cx="600" cy="650" rx="500" ry="120" fill="url(#pool)"/>
+  
+  <!-- Pool edge highlights -->
+  <ellipse cx="600" cy="645" rx="500" ry="5" fill="#60A5FA" opacity="0.6"/>
+  
+  <!-- Plants left -->
+  <ellipse cx="100" cy="720" rx="80" ry="60" fill="#166534"/>
+  <ellipse cx="120" cy="700" rx="60" ry="50" fill="#15803D"/>
+  
+  <!-- Plants right -->
+  <ellipse cx="1100" cy="720" rx="80" ry="60" fill="#166534"/>
+  <ellipse cx="1080" cy="700" rx="60" ry="50" fill="#15803D"/>
+  
+  <!-- Text -->
+  <text x="600" y="100" font-family="Arial, sans-serif" font-size="48" font-weight="bold" 
+        fill="white" text-anchor="middle" opacity="0.9">Retrofusion Experience</text>
+</svg>
