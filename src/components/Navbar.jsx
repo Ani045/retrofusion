@@ -64,7 +64,7 @@ const Navbar = () => {
               <img
                 src="https://res.cloudinary.com/damfndmrm/image/upload/v1765779522/Retro_fusion_logo_nmc7kf.png"
                 alt="Retrofusion Logo"
-                className={`h-10 sm:h-16 w-auto transition-all duration-300 ${
+                className={`h-8 sm:h-14 w-auto transition-all duration-300 ${
                   scrolled ? '' : 'brightness-0 invert'
                 }`}
               />
