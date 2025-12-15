@@ -63,7 +63,7 @@ const BlogSection = () => {
                         <div className="overflow-x-auto scrollbar-hide -mx-4 px-4">
                             <div className="flex gap-4 pb-4" style={{ scrollSnapType: 'x mandatory' }}>
                                 {blogPosts.map((post) => (
-                                    <motion.div
+                                    <div
                                         key={post.id}
                                         className="min-w-[280px] sm:min-w-[320px] bg-white rounded-xl shadow-lg overflow-hidden border border-stone-200 hover:shadow-xl transition-shadow duration-300"
                                         style={{ scrollSnapAlign: 'start' }}
@@ -93,7 +93,7 @@ const BlogSection = () => {
                                                 Read More
                                             </Link>
                                         </div>
-                                    </motion.div>
+                                    </div>
                                 ))}
                             </div>
                         </div>
@@ -129,7 +129,7 @@ const BlogSection = () => {
                                     }}
                                 >
                                     {blogPosts.map((post) => (
-                                        <motion.div
+                                        <div
                                             key={post.id}
                                             className="min-w-[calc(50%-0.75rem)] bg-white rounded-xl shadow-lg overflow-hidden border border-stone-200 hover:shadow-xl transition-shadow duration-300 flex h-40"
                                             whileHover={{ y: -4 }}
@@ -160,7 +160,7 @@ const BlogSection = () => {
                                                     Read More
                                                 </Link>
                                             </div>
-                                        </motion.div>
+                                        </div>
                                     ))}
                                 </div>
                             </div>

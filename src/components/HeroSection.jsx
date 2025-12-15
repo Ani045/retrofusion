@@ -47,7 +47,7 @@ const HeroSection = () => {
       <AnimatePresence mode="wait">
         {slides.map((slide, index) => (
           index === currentSlide && (
-            <motion.div
+            <div
               key={index}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -59,14 +59,14 @@ const HeroSection = () => {
               }}
             >
               <div className="absolute inset-0 bg-black/45"></div>
-            </motion.div>
+            </div>
           )
         ))}
       </AnimatePresence>
       
       {/* Content */}
       <AnimatePresence mode="wait">
-        <motion.div
+        <div
           key={currentSlide}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ const HeroSection = () => {
               View Gallery
             </Link>
           </div> */}
-        </motion.div>
+        </div>
       </AnimatePresence>
 
       {/* Navigation Arrows */}

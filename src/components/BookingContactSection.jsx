@@ -92,7 +92,7 @@ const BookingContactSection = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                     {/* Left Side - Steps + Contact Info */}
-                    <motion.div
+                    <div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -101,7 +101,7 @@ const BookingContactSection = () => {
                         {/* 3 Steps - Compact Cards */}
                         <div className="space-y-4">
                             {bookingSteps.map((step, index) => (
-                                <motion.div
+                                <div
                                     key={index}
                                     initial={{ opacity: 0, x: -20 }}
                                     whileInView={{ opacity: 1, x: 0 }}
@@ -128,12 +128,12 @@ const BookingContactSection = () => {
                                             {step.description}
                                         </p>
                                     </div>
-                                </motion.div>
+                                </div>
                             ))}
                         </div>
 
                         {/* Contact Information - Compact Card */}
-                        <motion.div
+                        <div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
@@ -161,11 +161,11 @@ const BookingContactSection = () => {
                                     </div>
                                 ))}
                             </div>
-                        </motion.div>
-                    </motion.div>
+                        </div>
+                    </div>
 
                     {/* Right Side - Compact Form */}
-                    <motion.div
+                    <div
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -339,17 +339,17 @@ const BookingContactSection = () => {
                                 </div>
 
                                 {/* Submit Button */}
-                                <motion.button
+                                <button
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.98 }}
                                     type="submit"
                                     className="w-full py-3 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold text-sm rounded-lg shadow-lg transition-all duration-300 uppercase tracking-wide"
                                 >
                                     Contact Now
-                                </motion.button>
+                                </button>
                             </form>
                         </div>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

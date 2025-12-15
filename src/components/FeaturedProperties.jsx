@@ -135,7 +135,7 @@ const FeaturedProperties = () => {
 
   return (
     <>
-      <motion.section
+      <section
         className="py-8 bg-gradient-to-br from-stone-50 via-amber-50/30 to-stone-100"
         initial="hidden"
         whileInView="visible"
@@ -146,22 +146,22 @@ const FeaturedProperties = () => {
 
           {/* Luxury Header Section */}
           <div className="mb-12">
-            <motion.h2
+            <h2
               className="text-4xl md:text-5xl font-display text-stone-800 mb-6 tracking-wider font-bold"
               variants={itemVariants}
             >
               Featured Properties
-            </motion.h2>
-            <motion.p
+            </h2>
+            <p
               className="text-lg text-stone-600 max-w-2xl leading-relaxed"
               variants={itemVariants}
             >
               Discover our collection of meticulously curated luxury villas, where every detail speaks of refined elegance.
-            </motion.p>
+            </p>
           </div>
 
           {/* Cards Section */}
-          <motion.div
+          <div
             className="w-full"
             variants={itemVariants}
           >
@@ -171,10 +171,10 @@ const FeaturedProperties = () => {
                 <VillaCard key={villa.id} {...villa} />
               ))}
             </div>
-          </motion.div>
+          </div>
 
         </div>
-      </motion.section>
+      </section>
 
 
     </>

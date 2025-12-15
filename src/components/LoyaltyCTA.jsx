@@ -5,7 +5,7 @@ const LoyaltyCTA = () => {
     return (
         <section className="bg-white px-4 sm:px-6 lg:px-16 py-8 lg:py-8">
             <div className="max-w-7xl mx-auto">
-                <motion.div
+                <div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -40,16 +40,16 @@ const LoyaltyCTA = () => {
 
                         {/* Right CTA Button */}
                         <div className="flex-shrink-0">
-                            <motion.button
+                            <button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold text-base sm:text-lg rounded-lg shadow-lg transition-all duration-300 uppercase tracking-wide"
                             >
                                 KNOW MORE
-                            </motion.button>
+                            </button>
                         </div>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

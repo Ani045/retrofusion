@@ -175,7 +175,7 @@ const PremiumFeaturesStrip = () => {
   };
 
   return (
-    <motion.section
+    <section
       className="py-8 bg-white"
       initial="hidden"
       whileInView="visible"
@@ -185,7 +185,7 @@ const PremiumFeaturesStrip = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header with Decorative Lines */}
-        <motion.div
+        <div
           className="flex items-center justify-center mb-12 gap-4"
           variants={itemVariants}
         >
@@ -198,12 +198,12 @@ const PremiumFeaturesStrip = () => {
           <div className="relative flex-1 max-w-48 h-px bg-amber-200">
             <div className="absolute -left-1 -top-1 w-2 h-2 bg-amber-200 transform rotate-45"></div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-6">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={index}
               className="flex flex-col items-center text-center relative"
               variants={itemVariants}
@@ -221,11 +221,11 @@ const PremiumFeaturesStrip = () => {
               <div className="text-stone-700 text-sm md:text-base lg:text-lg font-medium leading-relaxed whitespace-pre-line">
                 {feature.text}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
-    </motion.section >
+    </section >
   );
 };
 

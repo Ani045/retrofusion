@@ -55,7 +55,7 @@ const StayVistaStandard = () => {
   };
 
   return (
-    <motion.section 
+    <section 
       className="py-8 bg-gradient-to-br from-stone-50 via-white to-stone-100"
       initial="hidden"
       whileInView="visible"
@@ -64,7 +64,7 @@ const StayVistaStandard = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <motion.div
+        <div
           className="mb-12"
           variants={itemVariants}
         >
@@ -74,11 +74,11 @@ const StayVistaStandard = () => {
           <p className="text-lg text-stone-600 max-w-2xl leading-relaxed">
             Enjoy our signature features that make every stay effortless and enjoyable.
           </p>
-        </motion.div>
+        </div>
 
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           {/* Image Gallery Section */}
-          <motion.div 
+          <div 
             className="w-full lg:w-1/2"
             variants={itemVariants}
           >
@@ -109,16 +109,16 @@ const StayVistaStandard = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Features Grid Section */}
-          <motion.div 
+          <div 
             className="w-full lg:w-1/2"
             variants={itemVariants}
           >
             <div className="grid grid-cols-2 gap-8">
               {featuresData.map((feature, index) => (
-                <motion.div 
+                <div 
                   key={index} 
                   className="flex flex-col items-center text-center group"
                   variants={itemVariants}
@@ -131,13 +131,13 @@ const StayVistaStandard = () => {
                   <h3 className="text-base font-bold text-stone-800 leading-tight font-display">
                     {feature.label}
                   </h3>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

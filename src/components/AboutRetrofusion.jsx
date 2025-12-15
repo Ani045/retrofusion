@@ -23,7 +23,7 @@ const AboutRetrofusion = () => {
   };
 
   return (
-    <motion.section
+    <section
       className="bg-white px-4 sm:px-6 lg:px-16 py-8 lg:py-8"
       initial="hidden"
       whileInView="visible"
@@ -33,14 +33,14 @@ const AboutRetrofusion = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* Heading Section */}
-        <motion.div className="mb-12 lg:mb-16" variants={itemVariants}>
+        <div className="mb-12 lg:mb-16" variants={itemVariants}>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-stone-900 mb-4">
             About Retrofusion
           </h2>
           <p className="text-base sm:text-lg text-stone-500 max-w-2xl">
             Where vintage charm meets modern luxury to create unforgettable experiences
           </p>
-        </motion.div>
+        </div>
 
         {/* Content Grid: Text Left, Image Collage Right */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
@@ -49,16 +49,16 @@ const AboutRetrofusion = () => {
           <div className="w-full lg:w-1/2 space-y-8">
 
             {/* Main Description */}
-            <motion.div variants={itemVariants}>
+            <div variants={itemVariants}>
               <p className="text-lg leading-relaxed text-stone-700 mb-6">
                 We don't just offer stays—we craft experiences that become cherished memories.
                 Each villa in our collection tells a story of vintage charm reimagined for modern luxury,
                 creating intimate sanctuaries where time slows down and connections deepen.
               </p>
-            </motion.div>
+            </div>
 
             {/* Key Highlights Grid */}
-            <motion.div className="grid grid-cols-2 gap-4" variants={itemVariants}>
+            <div className="grid grid-cols-2 gap-4" variants={itemVariants}>
 
               <div className="bg-stone-50 p-5 rounded-xl border border-stone-200">
                 <div className="text-3xl font-bold text-amber-600 mb-2">500+</div>
@@ -69,10 +69,10 @@ const AboutRetrofusion = () => {
                 <div className="text-sm text-stone-600">Concierge Service</div>
               </div>
 
-            </motion.div>
+            </div>
 
             {/* Feature Cards */}
-            <motion.div className="space-y-4" variants={itemVariants}>
+            <div className="space-y-4" variants={itemVariants}>
               <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-200">
                 <h3 className="font-bold text-stone-800 mb-2 text-lg">Our Heritage</h3>
                 <p className="text-stone-600 text-base leading-relaxed">
@@ -86,12 +86,12 @@ const AboutRetrofusion = () => {
                   Every detail thoughtfully designed to create unforgettable moments and connections.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
           </div>
 
           {/* RIGHT: Image Collage */}
-          <motion.div
+          <div
             className="w-full lg:w-1/2"
             variants={itemVariants}
           >
@@ -125,7 +125,7 @@ const AboutRetrofusion = () => {
             </div>
 
             {/* Decorative Quote */}
-            {/* <motion.div
+            {/* <div
               className="mt-6 bg-white p-6 rounded-xl shadow-md border-l-4 border-amber-500"
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
@@ -136,12 +136,12 @@ const AboutRetrofusion = () => {
               <p className="text-amber-700 font-semibold mt-2 text-sm text-right">
                 — The Retrofusion Team
               </p>
-            </motion.div> */}
-          </motion.div>
+            </div> */}
+          </div>
 
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

@@ -70,7 +70,7 @@ const CollectionSection = () => {
     <section className="py-8 bg-gradient-to-br from-white via-stone-50/30 to-stone-100/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <motion.div
+        <div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -82,13 +82,13 @@ const CollectionSection = () => {
           <p className="text-base sm:text-lg text-stone-500 max-w-2xl leading-relaxed">
             Discover our curated collections of stunning villas for luxurious and unforgettable escapes!
           </p>
-        </motion.div>
+        </div>
 
         {/* MOBILE: Horizontal Scroll Container */}
         <div className="lg:hidden overflow-x-auto scrollbar-hide -mx-4 px-4">
           <div className="flex gap-4 pb-4" style={{ scrollSnapType: 'x mandatory' }}>
             {columnsData.map((column, colIndex) => (
-              <motion.div
+              <div
                 key={colIndex}
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -127,7 +127,7 @@ const CollectionSection = () => {
                     </div>
                   </div>
                 ))}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -135,7 +135,7 @@ const CollectionSection = () => {
         {/* DESKTOP: Grid Layout */}
         <div className="hidden lg:grid grid-cols-4 gap-6">
           {columnsData.map((column, colIndex) => (
-            <motion.div
+            <div
               key={colIndex}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -144,7 +144,7 @@ const CollectionSection = () => {
               className="flex flex-col gap-6 h-[600px]"
             >
               {column.map((item) => (
-                <motion.div
+                <div
                   key={item.id}
                   className={`
                     relative w-full rounded-3xl overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border border-stone-200
@@ -174,9 +174,9 @@ const CollectionSection = () => {
                   <div className="absolute bottom-6 left-6 text-white">
                     <h3 className="text-xl md:text-2xl font-bold font-display tracking-wide drop-shadow-lg">{item.title}</h3>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

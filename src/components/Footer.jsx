@@ -7,31 +7,21 @@ const { FiPhone, FiMail, FiMapPin, FiInstagram, FiFacebook, FiTwitter } = FiIcon
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-stone-300 overflow-hidden">
-      {/* Decorative Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(217,119,6,0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(217,119,6,0.15),transparent_50%)]" />
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <footer className="bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-stone-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
 
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-8">
 
           {/* Brand Section with Video - Takes More Space */}
-          <div className="lg:col-span-5">
-            {/* Logo Video */}
-            <div className="mb-6 bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full max-w-[280px] mx-auto lg:mx-0 rounded-xl"
-              >
-                <source src="/images/logo-intro-orange-2.mp4" type="video/mp4" />
-              </video>
+          <div className="lg:col-span-1">
+            {/* Logo */}
+            <div className="mb-6 flex justify-center lg:justify-start">
+              <img
+                src="https://res.cloudinary.com/damfndmrm/image/upload/v1765779522/Retro_fusion_logo_nmc7kf.png"
+                alt="Retrofusion Logo"
+                className="h-16 sm:h-20 w-auto"
+              />
             </div>
 
             <p className="text-stone-400 mb-6 leading-relaxed text-base">
@@ -61,48 +51,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div className="lg:col-span-3">
-            <h3 className="text-white font-bold mb-6 text-lg flex items-center">
-              <span className="w-1 h-6 bg-amber-500 mr-3 rounded-full"></span>
-              Quick Links
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/" className="text-stone-400 hover:text-amber-400 transition-colors duration-200 flex items-center group">
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 mr-0 group-hover:mr-2 transition-all duration-200"></span>
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/gallery" className="text-stone-400 hover:text-amber-400 transition-colors duration-200 flex items-center group">
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 mr-0 group-hover:mr-2 transition-all duration-200"></span>
-                  Gallery
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-stone-400 hover:text-amber-400 transition-colors duration-200 flex items-center group">
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 mr-0 group-hover:mr-2 transition-all duration-200"></span>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="text-stone-400 hover:text-amber-400 transition-colors duration-200 flex items-center group">
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 mr-0 group-hover:mr-2 transition-all duration-200"></span>
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link to="/policies" className="text-stone-400 hover:text-amber-400 transition-colors duration-200 flex items-center group">
-                  <span className="w-0 group-hover:w-2 h-0.5 bg-amber-500 mr-0 group-hover:mr-2 transition-all duration-200"></span>
-                  Policies
-                </Link>
-              </li>
-            </ul>
-          </div>
 
           {/* Contact Info */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-1">
             <h3 className="text-white font-bold mb-6 text-lg flex items-center">
               <span className="w-1 h-6 bg-amber-500 mr-3 rounded-full"></span>
               Get In Touch
