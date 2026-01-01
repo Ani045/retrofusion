@@ -7,7 +7,7 @@ const columnsData = [
     {
       id: 1,
       title: "Villas",
-      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop",
+      image: "/images/retro-image.webp",
       heightType: "tall", // 60% height
       tag: "Introducing" // Optional tag like in screenshot
     },
@@ -22,8 +22,8 @@ const columnsData = [
   [
     {
       id: 3,
-      title: "Infinity Pool",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop",
+      title: "Private Pool",
+      image: "/images/gallery/Retrofusion1.jpg",
       heightType: "short",
     },
     {

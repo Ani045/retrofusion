@@ -3,7 +3,9 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import VillaPage from './pages/VillaPage';
+import NeoVillaPage from './pages/NeoVillaPage';
+import ViswaVillaPage from './pages/ViswaVillaPage';
+import RetroVillaPage from './pages/RetroVillaPage';
 import Gallery from './pages/Gallery';
 import About from './pages/About';
 import Blog from './pages/Blog';
@@ -19,7 +21,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/villa/:villaId" element={<VillaPage />} />
+          <Route path="/neo-villa" element={<NeoVillaPage />} />
+          <Route path="/viswa-villa" element={<ViswaVillaPage />} />
+          <Route path="/retro-villa" element={<RetroVillaPage />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />

@@ -108,7 +108,7 @@ const FeaturedProperties = () => {
       guests: 15,
       bedrooms: 5,
       description: "Serene escape surrounded by nature. Spacious villa offering tranquil moments and premium amenities.",
-      image: "/images/retro.webp"
+      image: "/images/Retro-Viswa-lonawala.png"
     }
   ];
 

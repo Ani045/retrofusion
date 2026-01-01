@@ -21,30 +21,29 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'About', path: '/' },
-    { name: 'Contact', path: '/' },
-    { name: 'Gallery', path: '/' },
-    { name: 'Resources', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Gallery', path: '/gallery' },
   ];
 
   const villas = [
     {
-      name: 'Retro Villa',
-      image: '/images/retro.webp',
+      name: 'Viswa Villa',
+      image: '/images/Retro-Viswa-lonawala.png',
       tagline: 'Vintage charm meets modern luxury',
-      path: '/villa/retro'
+      path: '/viswa-villa'
     },
     {
       name: 'Neo Villa',
       image: '/images/neo.webp',
       tagline: 'Contemporary design with classic comfort',
-      path: '/villa/neo'
+      path: '/neo-villa'
     },
     {
-      name: 'Visawa Villa',
-      image: '/images/retro.webp',
-      tagline: 'Serene escape with premium amenities',
-      path: '/villa/visawa'
+      name: 'Retro Villa',
+      image: '/images/retro-image.webp',
+      tagline: 'Timeless elegance with classic comfort',
+      path: '/retro-villa'
     }
   ];
 
@@ -53,9 +52,8 @@ const Navbar = () => {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
@@ -64,9 +62,8 @@ const Navbar = () => {
               <img
                 src="https://res.cloudinary.com/damfndmrm/image/upload/v1765779522/Retro_fusion_logo_nmc7kf.png"
                 alt="Retrofusion Logo"
-                className={`h-8 sm:h-14 w-auto transition-all duration-300 ${
-                  scrolled ? '' : 'brightness-0 invert'
-                }`}
+                className={`h-8 sm:h-14 w-auto transition-all duration-300 ${scrolled ? '' : 'brightness-0 invert'
+                  }`}
               />
             </Link>
 
@@ -76,9 +73,8 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`transition-colors font-medium text-lg relative group ${
-                    scrolled ? 'text-stone-800 hover:text-amber-600' : 'text-white hover:text-amber-400'
-                  }`}
+                  className={`transition-colors font-medium text-lg relative group ${scrolled ? 'text-stone-800 hover:text-amber-600' : 'text-white hover:text-amber-400'
+                    }`}
                 >
                   <span className="text-sm sm:text-base lg:text-lg">{item.name}</span>
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
@@ -91,8 +87,7 @@ const Navbar = () => {
                 onMouseEnter={() => setShowMegaMenu(true)}
                 onMouseLeave={() => setShowMegaMenu(false)}
               >
-                <button className={`transition-colors font-medium text-lg flex items-center space-x-1 group ${
-                  scrolled ? 'text-stone-800 hover:text-amber-600' : 'text-white hover:text-amber-400'
+                <button className={`transition-colors font-medium text-lg flex items-center space-x-1 group ${scrolled ? 'text-stone-800 hover:text-amber-600' : 'text-white hover:text-amber-400'
                   }`}>
                   <span className="text-sm sm:text-base lg:text-lg">Our Villas</span>
                   <SafeIcon icon={FiChevronDown} className="w-4 h-4 transition-transform group-hover:rotate-180" />
