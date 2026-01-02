@@ -4,39 +4,41 @@ import { motion } from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const { FiUsers, FiWifi, FiTv, FiCoffee, FiCar, FiPhone, FiMapPin, FiStar, FiCheck, FiDroplet, FiSun, FiHome, FiCamera } = FiIcons;
+const { FiUsers, FiWifi, FiTv, FiCoffee, FiCar, FiPhone, FiMapPin, FiStar, FiCheck, FiDroplet, FiSun, FiHome, FiCamera, FiHeart } = FiIcons;
 
 const NeoVillaPage = () => {
     const villa = {
-        name: 'Neo Villa',
-        tagline: 'Contemporary Design Meets Classic Comfort',
-        description: 'Experience the perfect blend of modern architecture and timeless elegance at Neo Villa. This contemporary homestay features sleek interiors, premium amenities, and thoughtfully designed spaces that create an atmosphere of sophisticated comfort.',
-        longDescription: 'Neo Villa represents the pinnacle of modern hospitality design. With its clean lines, open spaces, and carefully curated contemporary furnishings, this villa offers guests a refined experience. The property features state-of-the-art amenities including a private pool, modern kitchen, and spacious bedrooms designed for ultimate relaxation.',
+        name: 'Neo-Retro Villa',
+        tagline: 'Luxurious 4 BHK Villa in Lonavala with Swimming Pool',
+        subtitle: 'An Artistic Retreat',
+        description: 'Discover the seamless blend of art, luxury, and nature at Neo-Retro Villa, Retrofusion\'s crown jewel nestled in the tranquil landscape of Lonavala. This spacious 4 BHK Villa in Lonavala with Swimming Pool is not just a place to stay; it\'s an immersive experience designed for art lovers, romantics, and those seeking a serene escape.',
+        longDescription: 'Experience the sublime fusion of art, luxury, and nature in Khandala\'s serene backdrop. An artistically themed villa with state-of-the-art amenities & scenic views, offering mesmerising mountain landscapes, comfort & luxury with themed bedrooms, jacuzzi, steam bath, and plunge pool.',
         heroImage: '/images/neo.webp',
+        heroVideo: 'https://res.cloudinary.com/damfndmrm/video/upload/v1767380077/Untitled_design_one3r4.mp4',
         guests: '10-12',
         bedrooms: '4',
         bathrooms: '4',
         area: '3500 sq ft',
         location: 'Lonavala, Maharashtra',
         highlights: [
-            'Modern Architecture',
+            'Mesmerising Mountain Views',
             'Private Swimming Pool',
-            'Contemporary Interiors',
-            'Premium Furnishing',
-            'Spacious Bedrooms',
-            'Mountain Views',
-            'BBQ Area',
-            'Perfect for Groups'
+            'Jacuzzi & Steam Bath',
+            'Themed Bedrooms',
+            'Entertainment Galore',
+            'Pet-Friendly Environment',
+            'BBQ & Outdoor Splendours',
+            'OTT Subscriptions Available'
         ],
         amenities: [
-            { icon: FiWifi, name: 'High-Speed WiFi' },
-            { icon: FiTv, name: 'Smart TV in all rooms' },
-            { icon: FiCoffee, name: 'Modern Kitchen' },
-            { icon: FiCar, name: 'Private Parking' },
-            { icon: FiDroplet, name: 'Private Pool' },
-            { icon: FiSun, name: 'Outdoor Terrace' },
-            { icon: FiHome, name: 'Spacious Living' },
-            { icon: FiCamera, name: 'Scenic Views' }
+            { icon: FiWifi, name: '60 Mbps High-Speed WiFi' },
+            { icon: FiTv, name: '55" HDTV with OTT Subscriptions' },
+            { icon: FiCoffee, name: 'Fully-equipped Kitchen' },
+            { icon: FiCar, name: 'Private Parking & Power Backup' },
+            { icon: FiDroplet, name: 'Swimming Pool, Jacuzzi & Steam Bath' },
+            { icon: FiSun, name: 'BBQ Grill & Outdoor Patio' },
+            { icon: FiHome, name: 'Pet-Friendly Accommodation' },
+            { icon: FiCamera, name: 'Traditional & Digital Security' }
         ],
         gallery: [
             '/images/neo.webp',
@@ -50,177 +52,594 @@ const NeoVillaPage = () => {
 
     const faqs = [
         {
-            question: 'What is the check-in and check-out time?',
-            answer: 'Check-in is at 2:00 PM and check-out is at 11:00 AM. Early check-in and late check-out can be arranged subject to availability.'
+            question: 'What is Neo Retro Villa?',
+            answer: 'Neo-Retro Villa is an artistic retreat that seamlessly blends art, luxury, and nature. It\'s a spacious 4 BHK villa in Lonavala with a swimming pool, designed for art lovers, romantics, and those seeking a serene escape with boutique homestay experience near Pune.'
         },
         {
-            question: 'Does Neo Villa have a private pool?',
-            answer: 'Yes, Neo Villa features its own private swimming pool exclusively for guests during their stay.'
+            question: 'Where is Neo Retro Villa located?',
+            answer: 'Located in the serene backdrop of Lonavala, Maharashtra, our villa is strategically positioned just 3.5 km from Kumar Resorts on Old Mumbai Pune Highway, offering easy access to scenic wonders and historical sights.'
         },
         {
-            question: 'Are pets allowed?',
-            answer: 'We welcome well-behaved pets with prior approval. Additional charges may apply for pet accommodation.'
+            question: 'What makes this villa special?',
+            answer: 'Our villa features an artistically themed design with state-of-the-art amenities including swimming pool, jacuzzi, steam bath, plunge pool, themed bedrooms, 55" HDTV with OTT subscriptions, and mesmerising mountain views.'
         },
         {
-            question: 'What amenities are included?',
-            answer: 'Your stay includes access to all villa amenities, complimentary WiFi, parking, modern kitchen facilities, and 24/7 support. Meals can be arranged separately.'
+            question: 'What are the check-in and check-out times?',
+            answer: 'Check-in is at 2:00 PM and check-out is at 11:00 AM. We ensure a seamless experience with our dedicated hospitality team.'
         },
         {
-            question: 'How far is Neo Villa from the main attractions?',
-            answer: 'Neo Villa is strategically located within easy reach of Lonavala\'s main attractions, typically 10-20 minutes by car.'
+            question: 'Is the villa pet-friendly?',
+            answer: 'Yes! Your furry companions are cherished guests too. We welcome pets and ensure they have a comfortable stay alongside you.'
         }
     ];
 
     const nearbyAttractions = [
-        { name: 'Tiger\'s Leap', distance: '3 km', description: 'Scenic cliff-top point with panoramic valley views' },
-        { name: 'Bhushi Dam', distance: '5 km', description: 'Popular water cascades and picnic spot' },
-        { name: 'Karla Caves', distance: '12 km', description: 'Ancient Buddhist rock-cut caves' },
-        { name: 'Rajmachi Fort', distance: '15 km', description: 'Historic fort with trekking trails' }
+        { name: 'Tungarli Lake', distance: '2 km', description: 'Serene lake perfect for peaceful walks and photography' },
+        { name: 'Lion\'s Point', distance: '4 km', description: 'Famous viewpoint offering breathtaking valley vistas' },
+        { name: 'Bhushi Dam', distance: '5 km', description: 'Popular water cascades and picnic spot during monsoon' },
+        { name: 'Lohagad Fort', distance: '8 km', description: 'Historic hill fort with stunning panoramic views' },
+        { name: 'Karla Caves', distance: '12 km', description: 'Ancient Buddhist rock-cut caves and historical sites' },
+        { name: 'Katardhal Waterfall', distance: '6 km', description: 'Beautiful waterfall surrounded by lush greenery' }
     ];
 
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative h-screen">
-                <div
-                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                    style={{ backgroundImage: `url(${villa.heroImage})` }}
-                >
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
-                </div>
+            <section className="relative min-h-screen overflow-hidden">
+                
+                {/* Desktop Layout */}
+                <div className="hidden lg:block relative min-h-screen bg-gradient-to-br from-stone-900 via-stone-800 to-amber-900">
+                    {/* Premium Background Pattern */}
+                    <div className="absolute inset-0 opacity-5">
+                        <div className="absolute inset-0" style={{ 
+                            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` 
+                        }}></div>
+                    </div>
 
-                <div className="relative z-10 h-full flex items-center justify-center">
-                    <motion.div
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1 }}
-                        className="text-center text-white max-w-7xl mx-auto px-4"
-                    >
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.3 }}
-                            className="text-amber-400 text-sm md:text-base uppercase tracking-[0.3em] mb-4"
-                        >
-                            Retrofusion Presents
-                        </motion.p>
-                        <h1
-                            className="text-5xl md:text-7xl font-bold mb-4"
-                            style={{ fontFamily: "'Marcellus', serif" }}
-                        >
-                            {villa.name}
-                        </h1>
-                        <p className="text-xl md:text-2xl mb-8 text-stone-200">{villa.tagline}</p>
+                    {/* Desktop Content Grid with Container */}
+                    <div className="relative z-10 min-h-screen flex flex-col">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col">
 
-                        <div className="flex flex-wrap justify-center gap-6 mb-8 text-lg">
-                            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                                <SafeIcon icon={FiUsers} className="w-5 h-5 text-amber-400" />
-                                <span>Up to {villa.guests} Guests</span>
-                            </div>
-                            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                                <SafeIcon icon={FiHome} className="w-5 h-5 text-amber-400" />
-                                <span>{villa.bedrooms} Bedrooms</span>
-                            </div>
-                            <div className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                                <SafeIcon icon={FiMapPin} className="w-5 h-5 text-amber-400" />
-                                <span>{villa.location}</span>
-                            </div>
+                            {/* Main Content Grid */}
+                            <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-24">
+                                
+                                {/* Left Content Panel */}
+                                <div className="lg:col-span-7">
+                                    <motion.div
+                                        initial={{ opacity: 0, x: -50 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 1.2 }}
+                                        className="w-full"
+                                    >
+                                {/* Premium Badge */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.2 }}
+                                    className="inline-flex items-center space-x-4 mb-6"
+                                >
+                                    <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+                                    <span className="text-amber-400 text-sm uppercase tracking-[0.5em] font-light">
+                                        Retrofusion Presents
+                                    </span>
+                                    <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+                                </motion.div>
+
+                                {/* Main Heading */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 1, delay: 0.4 }}
+                                    className="space-y-1 mb-6"
+                                >
+                                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight" style={{ fontFamily: "'Marcellus', serif" }}>
+                                        Welcome to
+                                    </h1>
+                                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent leading-tight" style={{ fontFamily: "'Marcellus', serif" }}>
+                                        {villa.name}
+                                    </h1>
+                                </motion.div>
+
+                                {/* Luxury Subtitle */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.6 }}
+                                    className="space-y-2 mb-6"
+                                >
+                                    <h2 className="text-xl lg:text-2xl text-amber-200 font-light tracking-wide">
+                                        {villa.tagline}
+                                    </h2>
+                                    <h3 className="text-lg lg:text-xl text-white font-light italic" style={{ fontFamily: "'Marcellus', serif" }}>
+                                        {villa.subtitle}
+                                    </h3>
+                                </motion.div>
+
+                                {/* Elegant Description */}
+                                <motion.p
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.8 }}
+                                    className="text-lg text-stone-300 leading-relaxed font-light mb-8"
+                                >
+                                    Discover the seamless blend of art, luxury, and nature at our crown jewel nestled in Lonavala's tranquil landscape.
+                                </motion.p>
+
+                                {/* Villa Stats Cards */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.9 }}
+                                    className="grid grid-cols-2 gap-4 mb-8"
+                                >
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-amber-400/20">
+                                        <div className="text-2xl font-bold text-amber-400 mb-1" style={{ fontFamily: "'Marcellus', serif" }}>{villa.guests}</div>
+                                        <div className="text-sm text-stone-300 uppercase tracking-wide">Guests Capacity</div>
+                                    </div>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-amber-400/20">
+                                        <div className="text-2xl font-bold text-amber-400 mb-1" style={{ fontFamily: "'Marcellus', serif" }}>{villa.bedrooms}</div>
+                                        <div className="text-sm text-stone-300 uppercase tracking-wide">BHK Villa</div>
+                                    </div>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-amber-400/20">
+                                        <div className="text-2xl font-bold text-amber-400 mb-1" style={{ fontFamily: "'Marcellus', serif" }}>{villa.area}</div>
+                                        <div className="text-sm text-stone-300 uppercase tracking-wide">Total Area</div>
+                                    </div>
+                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-amber-400/20">
+                                        <div className="text-2xl font-bold text-amber-400 mb-1" style={{ fontFamily: "'Marcellus', serif" }}>₹15K+</div>
+                                        <div className="text-sm text-stone-300 uppercase tracking-wide">Per Night</div>
+                                    </div>
+                                </motion.div>
+
+                                {/* Luxury Contact */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 1 }}
+                                    className="space-y-4"
+                                >
+                                    <div className="flex flex-col lg:flex-row gap-3">
+                                        <a
+                                            href="tel:+918999036644"
+                                            className="group bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white px-6 py-3 rounded-full text-base font-light transition-all duration-500 inline-flex items-center justify-center space-x-3 hover:scale-[1.02] hover:shadow-xl hover:shadow-amber-500/20"
+                                        >
+                                            <SafeIcon icon={FiPhone} className="w-4 h-4" />
+                                            <span>+91 89990 36644</span>
+                                        </a>
+                                        <a
+                                            href="mailto:retrofusion2023@gmail.com"
+                                            className="border border-amber-400/50 text-amber-400 hover:bg-amber-400/10 px-6 py-3 rounded-full text-base font-light transition-all duration-500 hover:scale-[1.02] text-center backdrop-blur-sm"
+                                        >
+                                            Send Enquiry
+                                        </a>
+                                    </div>
+                                </motion.div>
+                            </motion.div>
                         </div>
 
-                        <a
-                            href="tel:+919876543210"
-                            className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 inline-flex items-center space-x-2 hover:scale-105"
-                        >
-                            <SafeIcon icon={FiPhone} className="w-5 h-5" />
-                            <span>Book Now</span>
-                        </a>
-                    </motion.div>
+                                {/* Right Media Panel */}
+                                <div className="lg:col-span-5 relative">
+                                    <div className="h-[720px] grid grid-rows-4 gap-4 lg:gap-6">
+                                    
+                                    {/* Video Section */}
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.9, x: 50 }}
+                                        animate={{ opacity: 1, scale: 1, x: 0 }}
+                                        transition={{ duration: 1.2, delay: 0.6 }}
+                                        className="row-span-3 relative overflow-hidden rounded-3xl shadow-2xl group"
+                                    >
+                                        <video
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                            preload="metadata"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            poster={villa.heroImage}
+                                            onLoadedData={(e) => {
+                                                e.target.play().catch(() => {
+                                                    // Fallback if autoplay fails
+                                                });
+                                            }}
+                                        >
+                                            <source src={villa.heroVideo} type="video/mp4" />
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                                        <div className="absolute bottom-6 left-6 right-6">
+                                            <div className="bg-black/20 backdrop-blur-xl rounded-2xl p-4 border border-white/10">
+                                                <div className="flex items-center space-x-3">
+                                                    <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center">
+                                                        <SafeIcon icon={FiCamera} className="w-5 h-5 text-white" />
+                                                    </div>
+                                                    <div>
+                                                        <p className="text-white font-medium">Villa Experience</p>
+                                                        <p className="text-white/70 text-sm">Your luxury retreat awaits</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Image Gallery Preview */}
+                                    <motion.div
+                                        initial={{ opacity: 0, scale: 0.9, x: 50 }}
+                                        animate={{ opacity: 1, scale: 1, x: 0 }}
+                                        transition={{ duration: 1.2, delay: 0.8 }}
+                                        className="row-span-1 grid grid-cols-2 gap-4"
+                                    >
+                                        <div className="relative overflow-hidden rounded-2xl shadow-xl group cursor-pointer">
+                                            <img
+                                                src={villa.heroImage}
+                                                alt="Neo-Retro Villa Interior"
+                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                            <div className="absolute bottom-3 left-3 right-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <p className="text-sm font-medium">Interior Views</p>
+                                            </div>
+                                        </div>
+                                        <div className="relative overflow-hidden rounded-2xl shadow-xl group cursor-pointer">
+                                            <img
+                                                src="/images/gallery/neo1.jpg"
+                                                alt="Swimming Pool"
+                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                onError={(e) => {
+                                                    e.target.src = villa.heroImage;
+                                                }}
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                            <div className="absolute bottom-3 left-3 right-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <p className="text-sm font-medium">Pool & Gardens</p>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
-                {/* Scroll Indicator */}
+                {/* Mobile Layout - Video Background */}
+                <div className="lg:hidden relative h-full">
+                    {/* Full Screen Video Background */}
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="metadata"
+                        className="absolute inset-0 w-full h-full object-cover"
+                        poster={villa.heroImage}
+                        onLoadedData={(e) => {
+                            e.target.play().catch(() => {
+                                // Fallback if autoplay fails
+                            });
+                        }}
+                    >
+                        <source src={villa.heroVideo} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                    {/* Black Overlay */}
+                    <div className="absolute inset-0 bg-black/60"></div>
+                    
+                    {/* Mobile Content */}
+                    <div className="relative z-10 h-full flex flex-col">
+                        {/* Spacer for navbar */}
+                        <div className="h-20"></div>
+                        
+                        {/* Centered Content */}
+                        <div className="flex-1 flex items-center justify-center px-6">
+                            <motion.div
+                                initial={{ opacity: 0, y: 50 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 1.2 }}
+                                className="text-center w-full"
+                            >
+                                {/* Premium Badge */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.2 }}
+                                    className="inline-flex items-center space-x-3 mb-6"
+                                >
+                                    <div className="h-[1px] w-8 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+                                    <span className="text-amber-400 text-xs uppercase tracking-[0.3em] font-light">
+                                        Retrofusion Presents
+                                    </span>
+                                    <div className="h-[1px] w-8 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+                                </motion.div>
+
+                                {/* Main Heading */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 1, delay: 0.4 }}
+                                    className="space-y-2 mb-4"
+                                >
+                                    <h1 className="text-3xl font-light text-white leading-tight" style={{ fontFamily: "'Marcellus', serif" }}>
+                                        Welcome to
+                                    </h1>
+                                    <h1 className="text-3xl font-bold bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent leading-tight" style={{ fontFamily: "'Marcellus', serif" }}>
+                                        {villa.name}
+                                    </h1>
+                                </motion.div>
+
+                                {/* Mobile Subtitle */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.6 }}
+                                    className="space-y-1 mb-6"
+                                >
+                                    <h2 className="text-lg text-amber-200 font-light">
+                                        {villa.tagline}
+                                    </h2>
+                                    <h3 className="text-base text-white font-light italic" style={{ fontFamily: "'Marcellus', serif" }}>
+                                        {villa.subtitle}
+                                    </h3>
+                                </motion.div>
+
+                                {/* Mobile Features */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.8 }}
+                                    className="flex flex-wrap justify-center gap-4 text-sm mb-8"
+                                >
+                                    <div className="flex items-center space-x-2 text-amber-300">
+                                        <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                        <span>{villa.guests} Guests</span>
+                                    </div>
+                                    <div className="flex items-center space-x-2 text-amber-300">
+                                        <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                        <span>{villa.bedrooms} BHK</span>
+                                    </div>
+                                    <div className="flex items-center space-x-2 text-amber-300">
+                                        <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
+                                        <span>Pool & Jacuzzi</span>
+                                    </div>
+                                </motion.div>
+
+                                {/* Mobile Contact */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 1 }}
+                                    className="space-y-4"
+                                >
+                                    <a
+                                        href="tel:+918999036644"
+                                        className="group bg-gradient-to-r from-amber-600 to-amber-500 text-white px-6 py-3 rounded-full font-light transition-all duration-500 inline-flex items-center justify-center space-x-2 hover:scale-[1.02] hover:shadow-xl hover:shadow-amber-500/20"
+                                    >
+                                        <SafeIcon icon={FiPhone} className="w-4 h-4" />
+                                        <span>+91 89990 36644</span>
+                                    </a>
+                                    
+                                    <div className="flex items-center justify-center space-x-2 text-stone-300 text-sm">
+                                        <SafeIcon icon={FiMapPin} className="w-3 h-3 text-amber-400" />
+                                        <span>Lonavala, Maharashtra</span>
+                                    </div>
+                                </motion.div>
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Luxury Scroll Indicator */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 1.5 }}
-                    className="absolute bottom-8 left-1/2 -translate-x-1/2"
+                    className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:block z-20"
                 >
                     <motion.div
                         animate={{ y: [0, 10, 0] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                        className="flex flex-col items-center gap-2"
+                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                        className="flex flex-col items-center gap-3"
                     >
-                        <span className="text-xs uppercase tracking-[0.2em] text-white/60">Explore</span>
-                        <div className="w-[1px] h-8 bg-gradient-to-b from-amber-400/50 to-transparent"></div>
+                        
                     </motion.div>
                 </motion.div>
+
+                {/* Decorative Elements */}
+                <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-amber-400/10 to-transparent rounded-full blur-xl hidden xl:block"></div>
+                <div className="absolute bottom-40 left-20 w-24 h-24 bg-gradient-to-br from-amber-600/10 to-transparent rounded-full blur-lg hidden xl:block"></div>
             </section>
 
-            {/* Villa Details */}
-            <section className="py-20 bg-white">
+            {/* Luxury About Section */}
+            <section className="py-24 bg-gradient-to-b from-stone-50 via-white to-stone-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+                    
+                    {/* Luxury Header */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-20"
+                    >
+                        <div className="inline-flex items-center space-x-4 mb-6">
+                            <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+                            <span className="text-amber-600 text-sm uppercase tracking-[0.4em] font-light">Villa Features</span>
+                            <div className="h-[1px] w-20 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
+                        </div>
+                        <h2 className="text-5xl font-light text-stone-900 mb-6" style={{ fontFamily: "'Marcellus', serif" }}>
+                            Elegance Meets <span className="font-bold text-amber-600">Artistry</span>
+                        </h2>
+                        <p className="text-xl text-stone-600 max-w-3xl mx-auto font-light leading-relaxed">
+                            Experience the sublime fusion of art, luxury, and nature in Khandala's serene backdrop
+                        </p>
+                    </motion.div>
+
+                    {/* Luxury Stats */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-24"
+                    >
+                        <div className="text-center group">
+                            <div className="w-24 h-24 mx-auto mb-6 relative">
+                                <div className="w-full h-full bg-gradient-to-br from-amber-500/10 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-200 group-hover:border-amber-400 transition-all duration-500">
+                                    <SafeIcon icon={FiUsers} className="w-10 h-10 text-amber-600" />
+                                </div>
+                                <div className="absolute -inset-2 bg-gradient-to-br from-amber-400/5 to-transparent rounded-full blur-lg group-hover:from-amber-400/10 transition-all duration-500"></div>
+                            </div>
+                            <div className="text-4xl font-light text-stone-900 mb-2" style={{ fontFamily: "'Marcellus', serif" }}>{villa.guests}</div>
+                            <div className="text-stone-600 font-light tracking-wide uppercase text-sm">Guests</div>
+                        </div>
+                        
+                        <div className="text-center group">
+                            <div className="w-24 h-24 mx-auto mb-6 relative">
+                                <div className="w-full h-full bg-gradient-to-br from-stone-500/10 to-stone-600/20 rounded-full flex items-center justify-center border border-stone-200 group-hover:border-stone-400 transition-all duration-500">
+                                    <SafeIcon icon={FiHome} className="w-10 h-10 text-stone-600" />
+                                </div>
+                                <div className="absolute -inset-2 bg-gradient-to-br from-stone-400/5 to-transparent rounded-full blur-lg group-hover:from-stone-400/10 transition-all duration-500"></div>
+                            </div>
+                            <div className="text-4xl font-light text-stone-900 mb-2" style={{ fontFamily: "'Marcellus', serif" }}>{villa.bedrooms}</div>
+                            <div className="text-stone-600 font-light tracking-wide uppercase text-sm">Bedrooms</div>
+                        </div>
+                        
+                        <div className="text-center group">
+                            <div className="w-24 h-24 mx-auto mb-6 relative">
+                                <div className="w-full h-full bg-gradient-to-br from-amber-500/10 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-200 group-hover:border-amber-400 transition-all duration-500">
+                                    <SafeIcon icon={FiDroplet} className="w-10 h-10 text-amber-600" />
+                                </div>
+                                <div className="absolute -inset-2 bg-gradient-to-br from-amber-400/5 to-transparent rounded-full blur-lg group-hover:from-amber-400/10 transition-all duration-500"></div>
+                            </div>
+                            <div className="text-4xl font-light text-stone-900 mb-2" style={{ fontFamily: "'Marcellus', serif" }}>{villa.bathrooms}</div>
+                            <div className="text-stone-600 font-light tracking-wide uppercase text-sm">Bathrooms</div>
+                        </div>
+                        
+                        <div className="text-center group">
+                            <div className="w-24 h-24 mx-auto mb-6 relative">
+                                <div className="w-full h-full bg-gradient-to-br from-stone-500/10 to-stone-600/20 rounded-full flex items-center justify-center border border-stone-200 group-hover:border-stone-400 transition-all duration-500">
+                                    <SafeIcon icon={FiCamera} className="w-10 h-10 text-stone-600" />
+                                </div>
+                                <div className="absolute -inset-2 bg-gradient-to-br from-stone-400/5 to-transparent rounded-full blur-lg group-hover:from-stone-400/10 transition-all duration-500"></div>
+                            </div>
+                            <div className="text-3xl font-light text-stone-900 mb-2" style={{ fontFamily: "'Marcellus', serif" }}>{villa.area}</div>
+                            <div className="text-stone-600 font-light tracking-wide uppercase text-sm">Total Area</div>
+                        </div>
+                    </motion.div>
+
+                    {/* Luxury Features */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
+                        
+                        {/* Our Facilities */}
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
+                            className="space-y-8"
                         >
-                            <h2 className="text-4xl font-bold text-stone-900 mb-6" style={{ fontFamily: "'Marcellus', serif" }}>
-                                Modern <span className="text-amber-600">Luxury</span>
-                            </h2>
-                            <p className="text-lg text-stone-600 mb-6">{villa.description}</p>
-                            <p className="text-lg text-stone-600 mb-8">{villa.longDescription}</p>
+                            <div className="space-y-4">
+                                <div className="inline-flex items-center space-x-3">
+                                    <div className="w-1 h-16 bg-gradient-to-b from-amber-400 to-amber-600"></div>
+                                    <h3 className="text-3xl font-light text-stone-900" style={{ fontFamily: "'Marcellus', serif" }}>
+                                        Our Facilities <span className="font-bold text-amber-600">Leisure Zone</span>
+                                    </h3>
+                                </div>
+                                <p className="text-stone-600 font-light leading-relaxed">An artistically themed villa with state-of-the-art amenities & scenic views</p>
+                            </div>
 
-                            <div className="grid grid-cols-2 gap-4">
-                                <div className="text-center p-6 bg-gradient-to-br from-white to-stone-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-stone-200">
-                                    <div className="text-3xl font-bold text-amber-700">{villa.guests}</div>
-                                    <div className="text-stone-600 font-medium">Guests</div>
-                                </div>
-                                <div className="text-center p-6 bg-gradient-to-br from-white to-stone-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-stone-200">
-                                    <div className="text-3xl font-bold text-amber-700">{villa.bedrooms}</div>
-                                    <div className="text-stone-600 font-medium">Bedrooms</div>
-                                </div>
-                                <div className="text-center p-6 bg-gradient-to-br from-white to-stone-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-stone-200">
-                                    <div className="text-3xl font-bold text-amber-700">{villa.bathrooms}</div>
-                                    <div className="text-stone-600 font-medium">Bathrooms</div>
-                                </div>
-                                <div className="text-center p-6 bg-gradient-to-br from-white to-stone-50 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-stone-200">
-                                    <div className="text-3xl font-bold text-amber-700">{villa.area}</div>
-                                    <div className="text-stone-600 text-sm font-medium">Total Area</div>
-                                </div>
+                            <div className="space-y-6">
+                                {[
+                                    { icon: FiCamera, title: "Mesmerising Views", desc: "Overlook the enchanting mountain landscapes" },
+                                    { icon: FiDroplet, title: "Comfort & Luxury", desc: "Jacuzzi, steam bath, and plunge pool relaxation" },
+                                    { icon: FiTv, title: "Entertainment Galore", desc: "55\" HDTV with Netflix, Prime Video, Disney+" },
+                                    { icon: FiHeart, title: "Pet-Friendly", desc: "Your furry companions are cherished guests" }
+                                ].map((feature, index) => (
+                                    <div key={index} className="flex items-start space-x-5 p-6 bg-white/50 backdrop-blur-sm rounded-2xl hover:bg-white/80 transition-all duration-500 border border-stone-100 hover:border-amber-200 group">
+                                        <div className="w-14 h-14 bg-gradient-to-br from-amber-500/10 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-200 group-hover:border-amber-400 transition-all duration-500 flex-shrink-0">
+                                            <SafeIcon icon={feature.icon} className="w-6 h-6 text-amber-600" />
+                                        </div>
+                                        <div className="space-y-2">
+                                            <h4 className="text-xl font-medium text-stone-900" style={{ fontFamily: "'Marcellus', serif" }}>{feature.title}</h4>
+                                            <p className="text-stone-600 font-light leading-relaxed">{feature.desc}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
                         </motion.div>
 
+                        {/* In the Heart of Attractions */}
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
-                            className="space-y-6"
+                            className="space-y-8"
                         >
-                            <div>
-                                <h3 className="text-2xl font-bold text-stone-900 mb-4" style={{ fontFamily: "'Marcellus', serif" }}>Villa Highlights</h3>
-                                <div className="grid grid-cols-2 gap-3">
-                                    {villa.highlights.map((highlight, index) => (
-                                        <div key={index} className="flex items-center space-x-3 bg-stone-50 px-4 py-3 rounded-xl hover:bg-amber-50 transition-colors duration-300">
-                                            <SafeIcon icon={FiCheck} className="w-5 h-5 text-amber-600" />
-                                            <span className="text-stone-700 font-medium">{highlight}</span>
-                                        </div>
-                                    ))}
+                            <div className="space-y-4">
+                                <div className="inline-flex items-center space-x-3">
+                                    <div className="w-1 h-16 bg-gradient-to-b from-stone-400 to-stone-600"></div>
+                                    <h3 className="text-3xl font-light text-stone-900" style={{ fontFamily: "'Marcellus', serif" }}>
+                                        In the Heart of <span className="font-bold text-stone-700">Attractions</span>
+                                    </h3>
                                 </div>
+                                <p className="text-stone-600 font-light leading-relaxed">Discover scenic wonders, historical treasures, and culinary delights nearby</p>
                             </div>
 
-                            <div>
-                                <h3 className="text-2xl font-bold text-stone-900 mb-4" style={{ fontFamily: "'Marcellus', serif" }}>Amenities</h3>
-                                <div className="grid grid-cols-2 gap-4">
-                                    {villa.amenities.map((amenity, index) => (
-                                        <div key={index} className="flex items-center space-x-4 p-4 bg-gradient-to-br from-white to-stone-50 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-stone-200">
-                                            <SafeIcon icon={amenity.icon} className="w-6 h-6 text-amber-600" />
-                                            <span className="text-stone-700 font-medium">{amenity.name}</span>
+                            <div className="space-y-6">
+                                {[
+                                    { icon: FiSun, title: "Scenic Wonders", items: ["Tungarli Lake", "Katardhal Waterfall", "Lion's Point", "Bhushi Dam"] },
+                                    { icon: FiHome, title: "Historical Sights", items: ["Lohagad Fort", "Karla Caves"] },
+                                    { icon: FiCoffee, title: "Culinary Spots", items: ["Ramkrishna", "Utopia", "Oven Fresh"] },
+                                    { icon: FiCar, title: "Connectivity", items: ["3.5 km to Kumar Resorts", "Old Mumbai Pune Highway"] }
+                                ].map((category, index) => (
+                                    <div key={index} className="p-6 bg-white/50 backdrop-blur-sm rounded-2xl hover:bg-white/80 transition-all duration-500 border border-stone-100 hover:border-stone-200 group">
+                                        <div className="flex items-start space-x-5">
+                                            <div className="w-14 h-14 bg-gradient-to-br from-stone-500/10 to-stone-600/20 rounded-full flex items-center justify-center border border-stone-200 group-hover:border-stone-400 transition-all duration-500 flex-shrink-0">
+                                                <SafeIcon icon={category.icon} className="w-6 h-6 text-stone-600" />
+                                            </div>
+                                            <div className="flex-grow space-y-3">
+                                                <h4 className="text-xl font-medium text-stone-900" style={{ fontFamily: "'Marcellus', serif" }}>{category.title}</h4>
+                                                <div className="flex flex-wrap gap-2">
+                                                    {category.items.map((item, itemIndex) => (
+                                                        <span key={itemIndex} className="text-xs bg-stone-50 text-stone-700 px-4 py-2 rounded-full font-light border border-stone-200 hover:border-amber-300 hover:bg-amber-50 transition-all duration-300">
+                                                            {item}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            </div>
                                         </div>
-                                    ))}
-                                </div>
+                                    </div>
+                                ))}
                             </div>
                         </motion.div>
                     </div>
+
+                    {/* Luxury Amenities */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center"
+                    >
+                        <div className="inline-flex items-center space-x-4 mb-8">
+                            <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-stone-400 to-transparent"></div>
+                            <h3 className="text-3xl font-light text-stone-900" style={{ fontFamily: "'Marcellus', serif" }}>
+                                Essential <span className="font-bold text-amber-600">Amenities</span>
+                            </h3>
+                            <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-stone-400 to-transparent"></div>
+                        </div>
+                        
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                            {villa.amenities.map((amenity, index) => (
+                                <div key={index} className="text-center group">
+                                    <div className="w-20 h-20 mx-auto mb-4 relative">
+                                        <div className="w-full h-full bg-gradient-to-br from-white to-stone-50 rounded-2xl flex items-center justify-center border border-stone-200 group-hover:border-amber-300 group-hover:shadow-lg transition-all duration-500">
+                                            <SafeIcon icon={amenity.icon} className="w-8 h-8 text-stone-600 group-hover:text-amber-600 transition-colors duration-500" />
+                                        </div>
+                                        <div className="absolute -inset-1 bg-gradient-to-br from-amber-400/0 group-hover:from-amber-400/10 to-transparent rounded-2xl blur-sm transition-all duration-500"></div>
+                                    </div>
+                                    <p className="text-sm text-stone-700 font-light leading-relaxed">{amenity.name}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </motion.div>
                 </div>
             </section>
 
@@ -277,7 +696,7 @@ const NeoVillaPage = () => {
                         <p className="text-xl text-stone-600">Explore the beauty and culture around Neo Villa</p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {nearbyAttractions.map((attraction, index) => (
                             <motion.div
                                 key={index}
