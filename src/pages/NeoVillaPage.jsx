@@ -14,7 +14,7 @@ const NeoVillaPage = () => {
         description: 'Discover the seamless blend of art, luxury, and nature at Neo-Retro Villa, Retrofusion\'s crown jewel nestled in the tranquil landscape of Lonavala. This spacious 4 BHK Villa in Lonavala with Swimming Pool is not just a place to stay; it\'s an immersive experience designed for art lovers, romantics, and those seeking a serene escape.',
         longDescription: 'Experience the sublime fusion of art, luxury, and nature in Khandala\'s serene backdrop. An artistically themed villa with state-of-the-art amenities & scenic views, offering mesmerising mountain landscapes, comfort & luxury with themed bedrooms, jacuzzi, steam bath, and plunge pool.',
         heroImage: '/images/neo.webp',
-        heroVideo: 'https://res.cloudinary.com/damfndmrm/video/upload/v1767380077/Untitled_design_one3r4.mp4',
+        heroVideo: 'https://res.cloudinary.com/dprafk917/video/upload/v1768241694/1874704f-2b23-41a2-aa21-ca77ce4aaecd_ipao9k.mp4',
         guests: '10-12',
         bedrooms: '4',
         bathrooms: '4',
@@ -84,375 +84,221 @@ const NeoVillaPage = () => {
 
     return (
         <div>
-            {/* Hero Section */}
-            <section className="relative min-h-screen overflow-hidden">
-                
-                {/* Desktop Layout */}
-                <div className="hidden lg:block relative min-h-screen bg-gradient-to-br from-stone-900 via-stone-800 to-amber-900">
-                    {/* Premium Background Pattern */}
-                    <div className="absolute inset-0 opacity-5">
-                        <div className="absolute inset-0" style={{ 
-                            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")` 
-                        }}></div>
-                    </div>
+            {/* Hero Section - Fullscreen Video Background */}
+            <section className="relative h-screen overflow-hidden">
 
-                    {/* Desktop Content Grid with Container */}
-                    <div className="relative z-10 min-h-screen flex flex-col">
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex-1 flex flex-col">
+                {/* Fullscreen Video Background - Slightly Zoomed */}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="absolute inset-0 w-full h-full object-cover scale-[1.3]"
+                    poster={villa.heroImage}
+                    onLoadedData={(e) => {
+                        e.target.play().catch(() => {
+                            // Fallback if autoplay fails
+                        });
+                    }}
+                >
+                    <source src={villa.heroVideo} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
 
-                            {/* Main Content Grid */}
-                            <div className="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center py-24">
-                                
-                                {/* Left Content Panel */}
-                                <div className="lg:col-span-7">
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -50 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 1.2 }}
-                                        className="w-full"
-                                    >
-                                {/* Premium Badge */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.2 }}
-                                    className="inline-flex items-center space-x-4 mb-6"
-                                >
-                                    <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
-                                    <span className="text-amber-400 text-sm uppercase tracking-[0.5em] font-light">
-                                        Retrofusion Presents
-                                    </span>
-                                    <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
-                                </motion.div>
+                {/* Black Overlay */}
+                <div className="absolute inset-0 bg-black/60"></div>
 
-                                {/* Main Heading */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 1, delay: 0.4 }}
-                                    className="space-y-1 mb-6"
-                                >
-                                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight" style={{ fontFamily: "'Marcellus', serif" }}>
-                                        Welcome to
-                                    </h1>
-                                    <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent leading-tight" style={{ fontFamily: "'Marcellus', serif" }}>
-                                        {villa.name}
-                                    </h1>
-                                </motion.div>
+                {/* Main Content */}
+                <div className="relative z-10 h-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-4xl mx-auto text-center">
 
-                                {/* Luxury Subtitle */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.6 }}
-                                    className="space-y-2 mb-6"
-                                >
-                                    <h2 className="text-xl lg:text-2xl text-amber-200 font-light tracking-wide">
-                                        {villa.tagline}
-                                    </h2>
-                                    <h3 className="text-lg lg:text-xl text-white font-light italic" style={{ fontFamily: "'Marcellus', serif" }}>
-                                        {villa.subtitle}
-                                    </h3>
-                                </motion.div>
+                        {/* Main Heading & Subheading */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.2, delay: 0.3 }}
+                            className="space-y-4 sm:space-y-6 mb-8"
+                        >
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight drop-shadow-2xl" style={{ fontFamily: "'Marcellus', serif" }}>
+                                {villa.name}
+                            </h1>
+                            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/90 font-light max-w-2xl mx-auto">
+                                {villa.tagline}
+                            </p>
+                            <p className="text-sm sm:text-base md:text-lg text-amber-300 font-light italic" style={{ fontFamily: "'Marcellus', serif" }}>
+                                {villa.subtitle}
+                            </p>
+                        </motion.div>
 
-                                {/* Elegant Description */}
-                                <motion.p
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.8 }}
-                                    className="text-lg text-stone-300 leading-relaxed font-light mb-8"
-                                >
-                                    Discover the seamless blend of art, luxury, and nature at our crown jewel nestled in Lonavala's tranquil landscape.
-                                </motion.p>
-
-                                {/* Villa Stats Cards */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.9 }}
-                                    className="grid grid-cols-2 gap-4 mb-8"
-                                >
-                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-amber-400/20">
-                                        <div className="text-2xl font-bold text-amber-400 mb-1" style={{ fontFamily: "'Marcellus', serif" }}>{villa.guests}</div>
-                                        <div className="text-sm text-stone-300 uppercase tracking-wide">Guests Capacity</div>
-                                    </div>
-                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-amber-400/20">
-                                        <div className="text-2xl font-bold text-amber-400 mb-1" style={{ fontFamily: "'Marcellus', serif" }}>{villa.bedrooms}</div>
-                                        <div className="text-sm text-stone-300 uppercase tracking-wide">BHK Villa</div>
-                                    </div>
-                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-amber-400/20">
-                                        <div className="text-2xl font-bold text-amber-400 mb-1" style={{ fontFamily: "'Marcellus', serif" }}>{villa.area}</div>
-                                        <div className="text-sm text-stone-300 uppercase tracking-wide">Total Area</div>
-                                    </div>
-                                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-amber-400/20">
-                                        <div className="text-2xl font-bold text-amber-400 mb-1" style={{ fontFamily: "'Marcellus', serif" }}>₹15K+</div>
-                                        <div className="text-sm text-stone-300 uppercase tracking-wide">Per Night</div>
-                                    </div>
-                                </motion.div>
-
-                                {/* Luxury Contact */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 1 }}
-                                    className="space-y-4"
-                                >
-                                    <div className="flex flex-col lg:flex-row gap-3">
-                                        <a
-                                            href="tel:+918999036644"
-                                            className="group bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white px-6 py-3 rounded-full text-base font-light transition-all duration-500 inline-flex items-center justify-center space-x-3 hover:scale-[1.02] hover:shadow-xl hover:shadow-amber-500/20"
-                                        >
-                                            <SafeIcon icon={FiPhone} className="w-4 h-4" />
-                                            <span>+91 89990 36644</span>
-                                        </a>
-                                        <a
-                                            href="mailto:retrofusion2023@gmail.com"
-                                            className="border border-amber-400/50 text-amber-400 hover:bg-amber-400/10 px-6 py-3 rounded-full text-base font-light transition-all duration-500 hover:scale-[1.02] text-center backdrop-blur-sm"
-                                        >
-                                            Send Enquiry
-                                        </a>
-                                    </div>
-                                </motion.div>
-                            </motion.div>
-                        </div>
-
-                                {/* Right Media Panel */}
-                                <div className="lg:col-span-5 relative">
-                                    <div className="h-[720px] grid grid-rows-4 gap-4 lg:gap-6">
-                                    
-                                    {/* Video Section */}
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.9, x: 50 }}
-                                        animate={{ opacity: 1, scale: 1, x: 0 }}
-                                        transition={{ duration: 1.2, delay: 0.6 }}
-                                        className="row-span-3 relative overflow-hidden rounded-3xl shadow-2xl group"
-                                    >
-                                        <video
-                                            autoPlay
-                                            loop
-                                            muted
-                                            playsInline
-                                            preload="metadata"
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                            poster={villa.heroImage}
-                                            onLoadedData={(e) => {
-                                                e.target.play().catch(() => {
-                                                    // Fallback if autoplay fails
-                                                });
-                                            }}
-                                        >
-                                            <source src={villa.heroVideo} type="video/mp4" />
-                                            Your browser does not support the video tag.
-                                        </video>
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-                                        <div className="absolute bottom-6 left-6 right-6">
-                                            <div className="bg-black/20 backdrop-blur-xl rounded-2xl p-4 border border-white/10">
-                                                <div className="flex items-center space-x-3">
-                                                    <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center">
-                                                        <SafeIcon icon={FiCamera} className="w-5 h-5 text-white" />
-                                                    </div>
-                                                    <div>
-                                                        <p className="text-white font-medium">Villa Experience</p>
-                                                        <p className="text-white/70 text-sm">Your luxury retreat awaits</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-
-                                    {/* Image Gallery Preview */}
-                                    <motion.div
-                                        initial={{ opacity: 0, scale: 0.9, x: 50 }}
-                                        animate={{ opacity: 1, scale: 1, x: 0 }}
-                                        transition={{ duration: 1.2, delay: 0.8 }}
-                                        className="row-span-1 grid grid-cols-2 gap-4"
-                                    >
-                                        <div className="relative overflow-hidden rounded-2xl shadow-xl group cursor-pointer">
-                                            <img
-                                                src={villa.heroImage}
-                                                alt="Neo-Retro Villa Interior"
-                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            <div className="absolute bottom-3 left-3 right-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                                <p className="text-sm font-medium">Interior Views</p>
-                                            </div>
-                                        </div>
-                                        <div className="relative overflow-hidden rounded-2xl shadow-xl group cursor-pointer">
-                                            <img
-                                                src="/images/gallery/neo1.jpg"
-                                                alt="Swimming Pool"
-                                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                                onError={(e) => {
-                                                    e.target.src = villa.heroImage;
-                                                }}
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                            <div className="absolute bottom-3 left-3 right-3 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                                <p className="text-sm font-medium">Pool & Gardens</p>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                {/* Mobile Layout - Video Background */}
-                <div className="lg:hidden relative h-full">
-                    {/* Full Screen Video Background */}
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        preload="metadata"
-                        className="absolute inset-0 w-full h-full object-cover"
-                        poster={villa.heroImage}
-                        onLoadedData={(e) => {
-                            e.target.play().catch(() => {
-                                // Fallback if autoplay fails
-                            });
-                        }}
-                    >
-                        <source src={villa.heroVideo} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                    
-                    {/* Black Overlay */}
-                    <div className="absolute inset-0 bg-black/60"></div>
-                    
-                    {/* Mobile Content */}
-                    <div className="relative z-10 h-full flex flex-col">
-                        {/* Spacer for navbar */}
-                        <div className="h-20"></div>
-                        
-                        {/* Centered Content */}
-                        <div className="flex-1 flex items-center justify-center px-6">
-                            <motion.div
-                                initial={{ opacity: 0, y: 50 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 1.2 }}
-                                className="text-center w-full"
+                        {/* CTA Button */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.8 }}
+                        >
+                            <a
+                                href="tel:+918999036644"
+                                className="group bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium transition-all duration-500 inline-flex items-center justify-center space-x-3 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/40"
                             >
-                                {/* Premium Badge */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.2 }}
-                                    className="inline-flex items-center space-x-3 mb-6"
-                                >
-                                    <div className="h-[1px] w-8 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
-                                    <span className="text-amber-400 text-xs uppercase tracking-[0.3em] font-light">
-                                        Retrofusion Presents
-                                    </span>
-                                    <div className="h-[1px] w-8 bg-gradient-to-r from-transparent via-amber-400 to-transparent"></div>
-                                </motion.div>
-
-                                {/* Main Heading */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 1, delay: 0.4 }}
-                                    className="space-y-2 mb-4"
-                                >
-                                    <h1 className="text-3xl font-light text-white leading-tight" style={{ fontFamily: "'Marcellus', serif" }}>
-                                        Welcome to
-                                    </h1>
-                                    <h1 className="text-3xl font-bold bg-gradient-to-r from-amber-300 via-amber-400 to-amber-600 bg-clip-text text-transparent leading-tight" style={{ fontFamily: "'Marcellus', serif" }}>
-                                        {villa.name}
-                                    </h1>
-                                </motion.div>
-
-                                {/* Mobile Subtitle */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.6 }}
-                                    className="space-y-1 mb-6"
-                                >
-                                    <h2 className="text-lg text-amber-200 font-light">
-                                        {villa.tagline}
-                                    </h2>
-                                    <h3 className="text-base text-white font-light italic" style={{ fontFamily: "'Marcellus', serif" }}>
-                                        {villa.subtitle}
-                                    </h3>
-                                </motion.div>
-
-                                {/* Mobile Features */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 0.8 }}
-                                    className="flex flex-wrap justify-center gap-4 text-sm mb-8"
-                                >
-                                    <div className="flex items-center space-x-2 text-amber-300">
-                                        <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
-                                        <span>{villa.guests} Guests</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2 text-amber-300">
-                                        <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
-                                        <span>{villa.bedrooms} BHK</span>
-                                    </div>
-                                    <div className="flex items-center space-x-2 text-amber-300">
-                                        <div className="w-1.5 h-1.5 bg-amber-400 rounded-full"></div>
-                                        <span>Pool & Jacuzzi</span>
-                                    </div>
-                                </motion.div>
-
-                                {/* Mobile Contact */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.8, delay: 1 }}
-                                    className="space-y-4"
-                                >
-                                    <a
-                                        href="tel:+918999036644"
-                                        className="group bg-gradient-to-r from-amber-600 to-amber-500 text-white px-6 py-3 rounded-full font-light transition-all duration-500 inline-flex items-center justify-center space-x-2 hover:scale-[1.02] hover:shadow-xl hover:shadow-amber-500/20"
-                                    >
-                                        <SafeIcon icon={FiPhone} className="w-4 h-4" />
-                                        <span>+91 89990 36644</span>
-                                    </a>
-                                    
-                                    <div className="flex items-center justify-center space-x-2 text-stone-300 text-sm">
-                                        <SafeIcon icon={FiMapPin} className="w-3 h-3 text-amber-400" />
-                                        <span>Lonavala, Maharashtra</span>
-                                    </div>
-                                </motion.div>
-                            </motion.div>
-                        </div>
+                                <SafeIcon icon={FiPhone} className="w-5 h-5" />
+                                <span>Book Now</span>
+                            </a>
+                        </motion.div>
                     </div>
                 </div>
 
-                {/* Luxury Scroll Indicator */}
+                {/* Scroll Indicator */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 1.5 }}
-                    className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden lg:block z-20"
+                    transition={{ duration: 1, delay: 1.5 }}
+                    className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20"
                 >
                     <motion.div
                         animate={{ y: [0, 10, 0] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                        className="flex flex-col items-center gap-3"
+                        className="w-6 h-10 border-2 border-white/40 rounded-full flex justify-center pt-2"
                     >
-                        
+                        <motion.div
+                            animate={{ y: [0, 12, 0], opacity: [1, 0.3, 1] }}
+                            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                            className="w-1.5 h-1.5 bg-amber-400 rounded-full"
+                        />
                     </motion.div>
                 </motion.div>
-
-                {/* Decorative Elements */}
-                <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-amber-400/10 to-transparent rounded-full blur-xl hidden xl:block"></div>
-                <div className="absolute bottom-40 left-20 w-24 h-24 bg-gradient-to-br from-amber-600/10 to-transparent rounded-full blur-lg hidden xl:block"></div>
             </section>
 
-            {/* Luxury About Section */}
+            {/* About Section - Matching Reference Design */}
+            <section className="py-16 md:py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                    {/* Top Row - Heading and Description */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-10 md:mb-14">
+
+                        {/* Left - Label and Heading */}
+                        <div>
+                            {/* About Us Label */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="flex items-center space-x-2 mb-4"
+                            >
+                                <svg className="w-5 h-5 text-amber-600" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                                </svg>
+                                <span className="text-amber-600 text-sm font-medium uppercase tracking-wider">About Us</span>
+                            </motion.div>
+
+                            {/* Main Heading */}
+                            <motion.h2
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.1 }}
+                                className="text-3xl sm:text-4xl md:text-5xl font-bold text-stone-900 leading-tight mb-6"
+                                style={{ fontFamily: "'Marcellus', serif" }}
+                            >
+                                Neo Retro Villa: An Artistic Retreat
+                            </motion.h2>
+
+                            {/* View Gallery Button */}
+                            <motion.a
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.2 }}
+                                href="#gallery"
+                                className="inline-flex items-center space-x-2 bg-stone-800 hover:bg-stone-700 text-white px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
+                            >
+                                <span>View gallery</span>
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </motion.a>
+                        </div>
+
+                        {/* Right - Description */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="flex items-center"
+                        >
+                            <p className="text-stone-600 text-base md:text-lg leading-relaxed">
+                                Discover the seamless blend of art, luxury, and nature at Neo-Retro Villa, Retrofusion's crown jewel nestled in the tranquil landscape of Lonavala. This spacious <span className="font-semibold text-stone-800">4 BHK Villa in Lonavala with Swimming Pool</span> is not just a place to stay; it's an immersive experience designed for art lovers, romantics, and those seeking a serene escape with <span className="font-semibold text-stone-800">Boutique homestay near Pune</span>.
+                            </p>
+                        </motion.div>
+                    </div>
+
+                    {/* Bottom Row - Images */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+
+                        {/* Left - Large Image */}
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="relative group overflow-hidden rounded-3xl"
+                        >
+                            <img
+                                src="https://res.cloudinary.com/dprafk917/image/upload/v1768230663/9f5dd90d-eb0b-451d-8d08-508c5f69f2c5_rjpdzh.avif"
+                                alt="Neo Retro Villa Exterior"
+                                className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
+                            />
+                            {/* Play Video Overlay */}
+                            {/* <div className="absolute bottom-6 left-6">
+                                <button className="flex items-center space-x-3 bg-black/60 backdrop-blur-sm hover:bg-black/80 text-white px-5 py-3 rounded-full transition-all duration-300 group-hover:scale-105">
+                                    <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                                        <svg className="w-4 h-4 text-stone-900 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </div>
+                                    <span className="font-medium">Play Video</span>
+                                </button>
+                            </div> */}
+                        </motion.div>
+
+                        {/* Right - Two Stacked Images */}
+                        <div className="grid grid-rows-2 gap-6">
+                            <motion.div
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.2 }}
+                                className="relative group overflow-hidden rounded-3xl"
+                            >
+                                <img
+                                    src="https://res.cloudinary.com/dprafk917/image/upload/v1768230664/91a15ba5-b5da-4618-b585-5d7f92fa5df3_yqcadt.avif"
+                                    alt="Neo Retro Villa Interior"
+                                    className="w-full h-[190px] md:h-[235px] object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                            </motion.div>
+                            <motion.div
+                                initial={{ opacity: 0, x: 30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.3 }}
+                                className="relative group overflow-hidden rounded-3xl"
+                            >
+                                <img
+                                    src="https://res.cloudinary.com/dprafk917/image/upload/v1768230663/a613a1b2-edef-4242-8ee3-79ce77bae0e1_yi24hq.avif"
+                                    alt="Neo Retro Villa Pool Area"
+                                    className="w-full h-[190px] md:h-[235px] object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Features Section */}
             <section className="py-24 bg-gradient-to-b from-stone-50 via-white to-stone-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    
+
                     {/* Luxury Header */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -490,7 +336,7 @@ const NeoVillaPage = () => {
                             <div className="text-4xl font-light text-stone-900 mb-2" style={{ fontFamily: "'Marcellus', serif" }}>{villa.guests}</div>
                             <div className="text-stone-600 font-light tracking-wide uppercase text-sm">Guests</div>
                         </div>
-                        
+
                         <div className="text-center group">
                             <div className="w-24 h-24 mx-auto mb-6 relative">
                                 <div className="w-full h-full bg-gradient-to-br from-stone-500/10 to-stone-600/20 rounded-full flex items-center justify-center border border-stone-200 group-hover:border-stone-400 transition-all duration-500">
@@ -501,7 +347,7 @@ const NeoVillaPage = () => {
                             <div className="text-4xl font-light text-stone-900 mb-2" style={{ fontFamily: "'Marcellus', serif" }}>{villa.bedrooms}</div>
                             <div className="text-stone-600 font-light tracking-wide uppercase text-sm">Bedrooms</div>
                         </div>
-                        
+
                         <div className="text-center group">
                             <div className="w-24 h-24 mx-auto mb-6 relative">
                                 <div className="w-full h-full bg-gradient-to-br from-amber-500/10 to-amber-600/20 rounded-full flex items-center justify-center border border-amber-200 group-hover:border-amber-400 transition-all duration-500">
@@ -512,7 +358,7 @@ const NeoVillaPage = () => {
                             <div className="text-4xl font-light text-stone-900 mb-2" style={{ fontFamily: "'Marcellus', serif" }}>{villa.bathrooms}</div>
                             <div className="text-stone-600 font-light tracking-wide uppercase text-sm">Bathrooms</div>
                         </div>
-                        
+
                         <div className="text-center group">
                             <div className="w-24 h-24 mx-auto mb-6 relative">
                                 <div className="w-full h-full bg-gradient-to-br from-stone-500/10 to-stone-600/20 rounded-full flex items-center justify-center border border-stone-200 group-hover:border-stone-400 transition-all duration-500">
@@ -527,7 +373,7 @@ const NeoVillaPage = () => {
 
                     {/* Luxury Features */}
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
-                        
+
                         {/* Our Facilities */}
                         <motion.div
                             initial={{ opacity: 0, x: -50 }}
@@ -625,7 +471,7 @@ const NeoVillaPage = () => {
                             </h3>
                             <div className="h-[1px] w-16 bg-gradient-to-r from-transparent via-stone-400 to-transparent"></div>
                         </div>
-                        
+
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
                             {villa.amenities.map((amenity, index) => (
                                 <div key={index} className="text-center group">
