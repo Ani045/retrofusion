@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const { FiShield, FiClock, FiDollarSign, FiUsers, FiHome,FiAlertCircle } = FiIcons;
+const { FiShield, FiClock, FiDollarSign, FiUsers, FiHome, FiAlertCircle } = FiIcons;
 
 const Policies = () => {
   const policyCategories = [
@@ -37,15 +37,32 @@ const Policies = () => {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="py-20 bg-stone-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://res.cloudinary.com/dprafk917/image/upload/v1768230663/a613a1b2-edef-4242-8ee3-79ce77bae0e1_yi24hq.avif"
+            alt="Policies"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-stone-900/90"></div>
+        </div>
+
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Policies & Guidelines</h1>
-            <p className="text-xl text-stone-300 max-w-3xl mx-auto">
+            <span className="text-amber-400 uppercase tracking-[0.4em] text-sm md:text-base mb-6 block font-light">
+              Our Policies
+            </span>
+            <h1
+              className="text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-8 leading-[0.9]"
+              style={{ fontFamily: "'Marcellus', serif" }}
+            >
+              Policies & Guidelines
+            </h1>
+            <p className="text-stone-300 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
               Clear, fair policies designed to ensure a wonderful experience for all our guests while maintaining the quality and integrity of our properties.
             </p>
           </motion.div>
@@ -78,7 +95,7 @@ const Policies = () => {
       {/* Detailed Policies */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-          
+
           {/* Booking & Check-in */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -92,7 +109,7 @@ const Policies = () => {
               </div>
               <h2 className="text-2xl font-bold text-stone-900">Booking & Check-in Policies</h2>
             </div>
-            
+
             <div className="space-y-4 text-stone-700">
               <div>
                 <h3 className="font-semibold mb-2">Check-in & Check-out Times</h3>
@@ -103,7 +120,7 @@ const Policies = () => {
                   <li>Late check-in (after 8:00 PM) requires prior coordination</li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="font-semibold mb-2">Booking Requirements</h3>
                 <ul className="list-disc list-inside space-y-1 ml-4">
@@ -138,7 +155,7 @@ const Policies = () => {
               </div>
               <h2 className="text-2xl font-bold text-stone-900">Payment & Cancellation Policies</h2>
             </div>
-            
+
             <div className="space-y-4 text-stone-700">
               <div>
                 <h3 className="font-semibold mb-2">Payment Terms</h3>
@@ -149,7 +166,7 @@ const Policies = () => {
                   <li>Additional charges for extra services settled at checkout</li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="font-semibold mb-2">Accepted Payment Methods</h3>
                 <ul className="list-disc list-inside space-y-1 ml-4">
@@ -186,7 +203,7 @@ const Policies = () => {
               </div>
               <h2 className="text-2xl font-bold text-stone-900">Guest Guidelines</h2>
             </div>
-            
+
             <div className="space-y-4 text-stone-700">
               <div>
                 <h3 className="font-semibold mb-2">Occupancy Limits</h3>
@@ -197,7 +214,7 @@ const Policies = () => {
                   <li>Extra guests not permitted without prior approval</li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="font-semibold mb-2">Noise & Behavior Policy</h3>
                 <ul className="list-disc list-inside space-y-1 ml-4">
@@ -243,7 +260,7 @@ const Policies = () => {
               </div>
               <h2 className="text-2xl font-bold text-stone-900">Property Care Guidelines</h2>
             </div>
-            
+
             <div className="space-y-4 text-stone-700">
               <div>
                 <h3 className="font-semibold mb-2">General Care</h3>
@@ -254,7 +271,7 @@ const Policies = () => {
                   <li>Keep the property clean and tidy during your stay</li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="font-semibold mb-2">Kitchen & Dining</h3>
                 <ul className="list-disc list-inside space-y-1 ml-4">
@@ -300,7 +317,7 @@ const Policies = () => {
               </div>
               <h2 className="text-2xl font-bold text-stone-900">Safety & Security Policies</h2>
             </div>
-            
+
             <div className="space-y-4 text-stone-700">
               <div>
                 <h3 className="font-semibold mb-2">Security Measures</h3>
@@ -311,7 +328,7 @@ const Policies = () => {
                   <li>Regular security patrols in the neighborhood</li>
                 </ul>
               </div>
-              
+
               <div>
                 <h3 className="font-semibold mb-2">Emergency Procedures</h3>
                 <ul className="list-disc list-inside space-y-1 ml-4">
@@ -357,15 +374,15 @@ const Policies = () => {
                 <h3 className="text-xl font-bold text-amber-800 mb-3">Important Notice</h3>
                 <div className="text-amber-700 space-y-2">
                   <p>
-                    These policies are designed to ensure a pleasant stay for all guests and to maintain the quality of our properties. 
+                    These policies are designed to ensure a pleasant stay for all guests and to maintain the quality of our properties.
                     Violation of any policy may result in immediate termination of stay without refund.
                   </p>
                   <p>
-                    We reserve the right to modify these policies as needed. Updated policies will be communicated to guests 
+                    We reserve the right to modify these policies as needed. Updated policies will be communicated to guests
                     at the time of booking or through official channels.
                   </p>
                   <p>
-                    For any questions or clarifications regarding these policies, please contact us before your arrival. 
+                    For any questions or clarifications regarding these policies, please contact us before your arrival.
                     We're here to help ensure your stay is comfortable and enjoyable.
                   </p>
                 </div>

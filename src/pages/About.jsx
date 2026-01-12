@@ -78,10 +78,10 @@ const About = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     // Initial check
     checkMobile();
-    
+
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
@@ -91,7 +91,7 @@ const About = () => {
       {/* Immersive Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img
             src="https://res.cloudinary.com/dprafk917/image/upload/v1768230663/a613a1b2-edef-4242-8ee3-79ce77bae0e1_yi24hq.avif"
             alt="Retrofusion Story"
             className="w-full h-full object-cover"
@@ -108,8 +108,8 @@ const About = () => {
             <span className="text-amber-400 uppercase tracking-[0.4em] text-sm md:text-base mb-6 block font-light">
               Our Legacy
             </span>
-            <h1 
-              className="text-6xl md:text-8xl lg:text-9xl text-white font-bold mb-8 leading-[0.9]"
+            <h1
+              className="text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-8 leading-[0.9]"
               style={{ fontFamily: "'Marcellus', serif" }}
             >
               The Story of <br />
@@ -124,7 +124,7 @@ const About = () => {
         </div>
 
         {/* Scroll indicator */}
-        <motion.div 
+        <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10"
@@ -137,14 +137,14 @@ const About = () => {
       <section className="py-16 md:py-12 bg-stone-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
           {/* Header */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl mb-16 md:mb-24"
           >
-            <h2 
+            <h2
               className="text-4xl md:text-5xl lg:text-6xl text-stone-900 font-bold mb-8 leading-tight"
               style={{ fontFamily: "'Marcellus', serif" }}
             >
@@ -167,8 +167,8 @@ const About = () => {
                 transition={{ duration: 1, delay: 0.2 }}
                 className="w-1/2 aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl shadow-stone-200"
               >
-                <img 
-                  src="https://retrofusion.in/assets/img/custom/ruchi_11zon.webp" 
+                <img
+                  src="https://retrofusion.in/assets/img/custom/ruchi_11zon.webp"
 
                   alt="Ruchi Arora"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
@@ -181,8 +181,8 @@ const About = () => {
                 transition={{ duration: 1, delay: 0.4 }}
                 className="w-1/2 aspect-[3/4] rounded-[1.5rem] overflow-hidden shadow-2xl shadow-stone-200 mb-12 md:mb-20"
               >
-                <img 
-                  src="https://retrofusion.in/assets/img/custom/jidenter_11zon.webp" 
+                <img
+                  src="https://retrofusion.in/assets/img/custom/jidenter_11zon.webp"
                   alt="Jitendra Arora"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                 />
@@ -211,7 +211,7 @@ const About = () => {
                   transition={{ duration: 0.8, delay: 0.2 * index }}
                   className={`${index !== 0 ? 'border-t border-stone-200 mt-10 pt-10' : ''}`}
                 >
-                  <h3 
+                  <h3
                     className="text-2xl font-bold text-stone-900 mb-4"
                     style={{ fontFamily: "'Marcellus', serif" }}
                   >
@@ -258,7 +258,7 @@ const About = () => {
       <section className="py-24 md:py-32 relative overflow-hidden">
         {/* Background Image with Dark Overlay */}
         <div className="absolute inset-0 z-0">
-          <img 
+          <img
             src="https://res.cloudinary.com/dprafk917/image/upload/v1768230663/a613a1b2-edef-4242-8ee3-79ce77bae0e1_yi24hq.avif"
             alt="Background"
             className="w-full h-full object-cover"
@@ -273,14 +273,14 @@ const About = () => {
         <div className="max-w-4xl mx-auto px-4 relative z-10 pt-96 md:pt-80">
           <div className="relative group perspective-1000">
             {/* The Envelope Container - Removed overflow-hidden to allow letter to pop out */}
-            <div 
+            <div
               className="relative w-full aspect-[4/3] md:aspect-[16/10] bg-white rounded-b-3xl shadow-[0_30px_60px_rgba(0,0,0,0.05)] border-b border-x border-stone-200/50"
               style={{ clipPath: 'inset(-300% -50% 0 -50%)' }}
             >
-              
+
               {/* Logo on the Cover (Subtle Watermark/Seal Effect) */}
               <div className="absolute inset-0 z-30 pointer-events-none flex items-center justify-center pt-[20%]">
-                <motion.img 
+                <motion.img
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 0.15, scale: 1 }}
                   viewport={{ once: true }}
@@ -290,7 +290,7 @@ const About = () => {
                   className="w-32 md:w-48 h-auto grayscale brightness-0"
                 />
               </div>
-              
+
               {/* The Letter Card (Slides out from the pocket) */}
               <motion.div
                 initial={{ y: "20%", opacity: 0 }}
@@ -347,7 +347,7 @@ const About = () => {
               </motion.div>
 
               {/* Envelope Pocket Front (The visible part that overlaps the bottom of the letter) */}
-              <div 
+              <div
                 className="absolute inset-0 z-20 pointer-events-none rounded-b-3xl"
                 style={{
                   background: 'linear-gradient(135deg, #ffffff 0%, #f9f8f6 100%)',
@@ -357,7 +357,7 @@ const About = () => {
               ></div>
 
               {/* Decorative Envelope Lines for the Pocket */}
-              <div 
+              <div
                 className="absolute inset-0 z-20 pointer-events-none opacity-40 rounded-b-3xl"
                 style={{
                   border: '1px solid rgba(217, 119, 6, 0.15)',
@@ -370,7 +370,7 @@ const About = () => {
             </div>
 
             {/* Premium Seal/Label */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -389,14 +389,14 @@ const About = () => {
       <section className="py-16 md:py-12 bg-stone-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
           {/* Header */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl mb-16 md:mb-24"
           >
-            <h2 
+            <h2
               className="text-4xl md:text-5xl lg:text-6xl text-stone-900 font-bold mb-8 leading-tight"
               style={{ fontFamily: "'Marcellus', serif" }}
             >
@@ -419,8 +419,8 @@ const About = () => {
                 transition={{ duration: 1, delay: 0.2 }}
                 className="w-3/5 aspect-[3/4] rounded-[2rem] overflow-hidden shadow-2xl shadow-stone-200"
               >
-                <img 
-                  src="/images/gallery/Retrofusion1.jpg" 
+                <img
+                  src="/images/gallery/Retrofusion1.jpg"
                   alt="Retrofusion Living Space"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                 />
@@ -432,8 +432,8 @@ const About = () => {
                 transition={{ duration: 1, delay: 0.4 }}
                 className="w-2/5 aspect-[4/5] rounded-[1.5rem] overflow-hidden shadow-2xl shadow-stone-200 mb-12 md:mb-20"
               >
-                <img 
-                  src="/images/pool.png" 
+                <img
+                  src="/images/pool.png"
                   alt="Retrofusion Details"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                 />
@@ -464,7 +464,7 @@ const About = () => {
                   transition={{ duration: 0.8, delay: 0.2 * index }}
                   className={`${index !== 0 ? 'border-t border-stone-200 mt-10 pt-10' : ''}`}
                 >
-                  <h3 
+                  <h3
                     className="text-2xl font-bold text-stone-900 mb-4"
                     style={{ fontFamily: "'Marcellus', serif" }}
                   >
@@ -484,7 +484,7 @@ const About = () => {
       <section className="py-16 md:py-12 px-4 sm:px-6 lg:px-16 relative">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
+          <img
             src=""
             alt="Journey Background"
             className="w-full h-full object-cover"
@@ -540,7 +540,7 @@ const About = () => {
       <section className="py-24 relative overflow-hidden">
         {/* Background Image with Parallax-esque effect */}
         <div className="absolute inset-0 z-0">
-          <img 
+          <img
             src="https://res.cloudinary.com/dprafk917/image/upload/v1768230663/5d93e66d-23b4-4578-bb58-35032b8b39b8_cftv5v.avif"
             alt="Experience Retrofusion"
             className="w-full h-full object-cover"
@@ -562,8 +562,8 @@ const About = () => {
             <p className="text-white text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
               Step into a space where every moment is curated, every corner has a narrative, and every guest is family.
             </p>
-            <a 
-              href="/gallery" 
+            <a
+              href="/gallery"
               className="inline-flex items-center gap-3 bg-white text-stone-900 px-10 py-5 rounded-full font-medium text-lg hover:bg-amber-400 hover:text-stone-900 transition-all duration-300 group shadow-2xl"
             >
               Explore Our Collection

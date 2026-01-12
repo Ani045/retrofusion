@@ -104,22 +104,39 @@ const Gallery = () => {
     }
   ];
 
-  const filteredImages = selectedCategory === 'all' 
-    ? images 
+  const filteredImages = selectedCategory === 'all'
+    ? images
     : images.filter(image => image.category === selectedCategory);
 
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="py-20 bg-stone-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://res.cloudinary.com/dprafk917/image/upload/v1768230663/a613a1b2-edef-4242-8ee3-79ce77bae0e1_yi24hq.avif"
+            alt="Gallery"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-stone-900/90"></div>
+        </div>
+
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Gallery</h1>
-            <p className="text-xl text-stone-300 max-w-3xl mx-auto">
+            <span className="text-amber-400 uppercase tracking-[0.4em] text-sm md:text-base mb-6 block font-light">
+              Visual Journey
+            </span>
+            <h1
+              className="text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-8 leading-[0.9]"
+              style={{ fontFamily: "'Marcellus', serif" }}
+            >
+              Gallery
+            </h1>
+            <p className="text-stone-300 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
               Discover the beauty, comfort, and unique character of our boutique villas through our curated collection of images.
             </p>
           </motion.div>
@@ -134,11 +151,10 @@ const Gallery = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-semibold transition-colors ${
-                  selectedCategory === category.id
-                    ? 'bg-amber-700 text-white'
-                    : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
-                }`}
+                className={`px-6 py-3 rounded-full font-semibold transition-colors ${selectedCategory === category.id
+                  ? 'bg-amber-700 text-white'
+                  : 'bg-stone-100 text-stone-700 hover:bg-stone-200'
+                  }`}
               >
                 {category.name}
               </button>
@@ -152,7 +168,7 @@ const Gallery = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredImages.map((image, index) => (
-              <motion.div
+              <div
                 key={image.id}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -173,7 +189,7 @@ const Gallery = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -205,7 +221,7 @@ const Gallery = () => {
       {/* CTA Section */}
       <section className="py-20 bg-amber-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -222,7 +238,7 @@ const Gallery = () => {
             >
               Book Your Stay Now
             </a>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

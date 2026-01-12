@@ -95,15 +95,32 @@ const Blog = () => {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="py-20 bg-stone-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative h-[50vh] md:h-[60vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://res.cloudinary.com/dprafk917/image/upload/v1768230663/a613a1b2-edef-4242-8ee3-79ce77bae0e1_yi24hq.avif"
+            alt="Travel Blog"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-stone-900/90"></div>
+        </div>
+
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 1.2, ease: "easeOut" }}
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Travel Blog</h1>
-            <p className="text-xl text-stone-300 max-w-3xl mx-auto">
+            <span className="text-amber-400 uppercase tracking-[0.4em] text-sm md:text-base mb-6 block font-light">
+              Stories & Insights
+            </span>
+            <h1
+              className="text-5xl md:text-7xl lg:text-8xl text-white font-bold mb-8 leading-[0.9]"
+              style={{ fontFamily: "'Marcellus', serif" }}
+            >
+              Travel Blog
+            </h1>
+            <p className="text-stone-300 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">
               Discover Lonavala through our eyes. Local insights, hidden gems, and travel tips to make your stay unforgettable.
             </p>
           </motion.div>
@@ -113,16 +130,16 @@ const Blog = () => {
       {/* Featured Post */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-stone-900 mb-8">Featured Story</h2>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -172,7 +189,7 @@ const Blog = () => {
                 <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -195,18 +212,18 @@ const Blog = () => {
       {/* Blog Posts Grid */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-stone-900 mb-8">Latest Stories</h2>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {blogPosts.map((post, index) => (
-              <motion.article
+              <article
                 key={post.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -243,7 +260,7 @@ const Blog = () => {
                     </Link>
                   </div>
                 </div>
-              </motion.article>
+              </article>
             ))}
           </div>
         </div>
@@ -252,7 +269,7 @@ const Blog = () => {
       {/* Newsletter Section */}
       <section className="py-20 bg-amber-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -273,7 +290,7 @@ const Blog = () => {
                 Subscribe
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
