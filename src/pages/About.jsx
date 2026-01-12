@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import SafeIcon from '../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
@@ -71,6 +71,20 @@ const About = () => {
       transition: { duration: 0.8, ease: "easeOut" }
     }
   };
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    // Initial check
+    checkMobile();
+    
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <div className="bg-stone-50 overflow-hidden">
@@ -256,10 +270,13 @@ const About = () => {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-400/10 rounded-full blur-[120px] -mr-64 -mt-64 z-1"></div>
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-400/10 rounded-full blur-[120px] -ml-64 -mb-64 z-1"></div>
 
-        <div className="max-w-4xl mx-auto px-4 relative z-10 pt-32 md:pt-40">
+        <div className="max-w-4xl mx-auto px-4 relative z-10 pt-96 md:pt-80">
           <div className="relative group perspective-1000">
             {/* The Envelope Container - Removed overflow-hidden to allow letter to pop out */}
-            <div className="relative w-full aspect-[4/3] md:aspect-[16/10] bg-white rounded-b-3xl shadow-[0_30px_60px_rgba(0,0,0,0.05)] border-b border-x border-stone-200/50">
+            <div 
+              className="relative w-full aspect-[4/3] md:aspect-[16/10] bg-white rounded-b-3xl shadow-[0_30px_60px_rgba(0,0,0,0.05)] border-b border-x border-stone-200/50"
+              style={{ clipPath: 'inset(-300% -50% 0 -50%)' }}
+            >
               
               {/* Logo on the Cover (Subtle Watermark/Seal Effect) */}
               <div className="absolute inset-0 z-30 pointer-events-none flex items-center justify-center pt-[20%]">
@@ -277,10 +294,10 @@ const About = () => {
               {/* The Letter Card (Slides out from the pocket) */}
               <motion.div
                 initial={{ y: "20%", opacity: 0 }}
-                whileInView={{ y: "-35%", opacity: 1 }}
+                whileInView={{ y: isMobile ? "-75%" : "-55%", opacity: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-                className="absolute inset-x-4 md:inset-x-12 top-0 z-10 bg-white rounded-2xl shadow-2xl border border-stone-100 p-8 md:p-14"
+                className="absolute inset-x-4 md:inset-x-12 top-0 z-10 bg-white rounded-2xl shadow-2xl border border-stone-100 p-8 pb-24 md:p-14 md:pb-40"
                 style={{ height: "auto" }}
               >
                 {/* Letter Content */}
@@ -295,7 +312,7 @@ const About = () => {
                   </div>
 
                   {/* Body - Scrollable with fixed height to force overflow */}
-                  <div className="max-h-[200px] md:max-h-[300px] overflow-y-auto pr-4 custom-scrollbar mb-8">
+                  <div className="max-h-[150px] md:max-h-[300px] overflow-y-auto pr-4 custom-scrollbar mb-8">
                     <div className="space-y-6 text-stone-800 text-base md:text-xl leading-relaxed font-light">
                       <p>
                         Retrofusion was born from a simple yet profound belief: that travel should be more than a change of scenery—it should be a <span className="text-stone-900 font-normal">homecoming for the soul</span>.
