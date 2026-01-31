@@ -14,18 +14,28 @@ const BentoGallery = () => {
 
     const allImages = [
         'https://res.cloudinary.com/dprafk917/video/upload/so_3/v1769867671/final_nkd4ry.jpg',
-        '/images/retro-image.webp',
-        '/images/retro.webp',
-        '/images/gallery/retro1.jpg',
-        '/images/gallery/retro2.jpg',
-        '/images/gallery/retro3.jpg',
-        '/images/gallery/retro4.jpg',
-        '/images/Retro-Viswa-lonawala.png',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/B30_yc8rqu.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/C26_j6pstx.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/05_ivb2yz.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/04_dztuhq.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868155/M08_qewdva.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868143/M01_jjmwdw.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868142/G31_mdlfjh.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868143/J24_wrncmb.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868144/M21_c2fjh0.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868144/M09_hilzeh.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868141/I08_mjtxcg.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868143/F18A_qmvadk.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868142/H10_byp3oh.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868142/K17_qzihhb.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769868141/E06_tevptf.webp',
     ];
 
     const imageSets = [
         allImages.slice(0, 4),
         allImages.slice(4, 8),
+        allImages.slice(8, 12),
+        allImages.slice(12, 16),
     ];
 
     useEffect(() => {
@@ -155,7 +165,7 @@ const RetroVillaPage = () => {
         subtitle: 'A Vintage Escape',
         description: 'Explore the best villa near Lonavala, featuring private plunge pool and bespoke amenities designed for your comfort and enjoyment.',
         longDescription: 'From the enchanting Retro Villa to the artistic Neo-Retro Villa, immerse yourself in spaces where every detail is crafted for luxury, relaxation, and a genuine connection with art with the best homestay near Mumbai.',
-        heroImage: '/images/retro-image.webp',
+        heroImage: 'https://res.cloudinary.com/dprafk917/video/upload/so_3/v1769867671/final_nkd4ry.jpg',
         heroVideo: 'https://res.cloudinary.com/dprafk917/video/upload/v1769867671/final_nkd4ry.mp4',
         guests: '8-10',
         bedrooms: '4',
@@ -234,10 +244,10 @@ const RetroVillaPage = () => {
                         </div>
                         <div className="grid grid-rows-2 gap-6">
                             <div className="relative group overflow-hidden rounded-3xl">
-                                <img src="/images/retro-image.webp" alt="Retro Villa Interior" className="w-full h-[190px] md:h-[235px] object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <img src="https://res.cloudinary.com/dprafk917/image/upload/v1769868140/B30_yc8rqu.webp" alt="Retro Villa Interior" className="w-full h-[190px] md:h-[235px] object-cover transition-transform duration-700 group-hover:scale-105" />
                             </div>
                             <div className="relative group overflow-hidden rounded-3xl">
-                                <img src="/images/retro.webp" alt="Retro Villa Garden" className="w-full h-[190px] md:h-[235px] object-cover transition-transform duration-700 group-hover:scale-105" />
+                                <img src="https://res.cloudinary.com/dprafk917/image/upload/v1769868143/M01_jjmwdw.webp" alt="Retro Villa Pool" className="w-full h-[190px] md:h-[235px] object-cover transition-transform duration-700 group-hover:scale-105" />
                             </div>
                         </div>
                     </div>
@@ -389,7 +399,7 @@ const RetroVillaPage = () => {
             {/* FAQ & CTA Section */}
             <section className="relative py-12 md:py-14 overflow-hidden">
                 <div className="absolute inset-0">
-                    <img src="/images/retro-image.webp" alt="Retro Villa Background" className="w-full h-full object-cover" />
+                    <img src="https://res.cloudinary.com/dprafk917/image/upload/v1769868142/G31_mdlfjh.webp" alt="Retro Villa Background" className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/60 to-black/50"></div>
                 </div>
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
