@@ -94,7 +94,7 @@ const FeaturedProperties = () => {
     },
     {
       id: 2,
-      name: "Neo Villa",
+      name: "Neo Retro Villa",
       location: "Lonavala",
       guests: 8,
       bedrooms: 3,

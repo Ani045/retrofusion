@@ -13,8 +13,8 @@ const bannerImages = [
 
 // Villa data for bottom links
 const villas = [
-  { name: 'Neo Villa', path: '/neo-villa' },
-  { name: 'Viswa Villa', path: '/viswa-villa' },
+  { name: 'Neo Retro Villa', path: '/neo-villa' },
+  { name: 'Retro Visawa', path: '/viswa-villa' },
   { name: 'Retro Villa', path: '/retro-villa' },
 ];
 
@@ -225,13 +225,12 @@ const HeroSection = () => {
           </div>
         )}
 
-        {/* Multi-layer Black Overlay for depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70 z-10"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 z-10"></div>
+        {/* Lighter overlay for better image visibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40 z-10"></div>
 
         {/* Subtle vignette effect */}
         <div className="absolute inset-0 z-10" style={{
-          background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.4) 100%)'
+          background: 'radial-gradient(ellipse at center, transparent 0%, rgba(0,0,0,0.2) 100%)'
         }}></div>
       </div>
 

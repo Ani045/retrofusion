@@ -43,7 +43,7 @@ const About = () => {
     {
       year: '2022',
       title: 'Curated Growth',
-      description: 'Expanding the collection with Neo Villa and Viswa Villa, each with a distinct personality.'
+      description: 'Expanding the collection with Neo Retro Villa and Retro Visawa, each with a distinct personality.'
     },
     {
       year: '2024',
@@ -96,7 +96,7 @@ const About = () => {
             alt="Retrofusion Story"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-stone-900/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50"></div>
         </div>
 
         <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">

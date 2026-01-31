@@ -27,7 +27,7 @@ const Footer = () => {
   const quickLinks = [
     { name: 'Home', path: '/' },
     { name: 'Our Story', path: '/about' },
-    { name: 'Neo Villa', path: '/neo-villa' },
+    { name: 'Neo Retro Villa', path: '/neo-villa' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -40,7 +40,7 @@ const Footer = () => {
   const villaLinks = [
     { name: 'Retro Villa', path: '/' },
     { name: 'Neo Retro Villa', path: '/neo-villa' },
-    { name: 'Viswa Villa', path: '/' },
+    { name: 'Retro Visawa', path: '/viswa-villa' },
   ];
 
   return (

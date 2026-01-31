@@ -78,7 +78,7 @@ const BlogPost = () => {
         ></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -119,7 +119,7 @@ const BlogPost = () => {
                 <span>{post.readTime}</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -128,7 +128,7 @@ const BlogPost = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Main Content */}
-            <motion.div
+            <div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
@@ -178,10 +178,10 @@ const BlogPost = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Sidebar */}
-            <motion.div
+            <div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
@@ -222,7 +222,7 @@ const BlogPost = () => {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -230,7 +230,7 @@ const BlogPost = () => {
       {/* Related Posts */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -238,11 +238,11 @@ const BlogPost = () => {
           >
             <h2 className="text-3xl font-bold text-stone-900 mb-4">Related Stories</h2>
             <p className="text-stone-600">Discover more insights and tips for your Lonavala adventure</p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {relatedPosts.map((relatedPost, index) => (
-              <motion.div
+              <div
                 key={relatedPost.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -270,7 +270,7 @@ const BlogPost = () => {
                     Read More →
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -279,7 +279,7 @@ const BlogPost = () => {
       {/* CTA Section */}
       <section className="py-20 bg-amber-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -296,7 +296,7 @@ const BlogPost = () => {
             >
               Book Your Stay Now
             </a>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

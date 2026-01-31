@@ -14,16 +14,22 @@ const BentoGallery = () => {
 
     // All gallery images from Cloudinary
     const allImages = [
-        'https://res.cloudinary.com/dprafk917/image/upload/v1768230663/9f5dd90d-eb0b-451d-8d08-508c5f69f2c5_rjpdzh.avif',
-        'https://res.cloudinary.com/dprafk917/image/upload/v1768230663/a613a1b2-edef-4242-8ee3-79ce77bae0e1_yi24hq.avif',
-        'https://res.cloudinary.com/dprafk917/image/upload/v1768230664/91a15ba5-b5da-4618-b585-5d7f92fa5df3_yqcadt.avif',
-        'https://res.cloudinary.com/dprafk917/image/upload/v1768248894/2_hogr0f.avif',
-        'https://res.cloudinary.com/dprafk917/image/upload/v1768248894/6_tvvdn8.avif',
-        'https://res.cloudinary.com/dprafk917/image/upload/v1768248894/5_kuaou6.avif',
-        'https://res.cloudinary.com/dprafk917/image/upload/v1768248894/4_durxmw.avif',
-        'https://res.cloudinary.com/dprafk917/image/upload/v1768248895/7_c3uz2f.avif',
-        'https://res.cloudinary.com/dprafk917/image/upload/v1768248895/1_eyt1cq.avif',
-        'https://res.cloudinary.com/dprafk917/image/upload/v1768248895/9_vcaja3.avif',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863054/03.1_c7vcel.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863054/12_myvknr.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863051/07.1_u8yrn6.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863051/08.2_ws3oiy.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863047/29_qtp6zr.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863047/20_haycpz.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863046/19_jxrtxx.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863045/18_xqydeo.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863044/14_w8imzc.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863043/08.1_cth2qs.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863043/09_ufowaj.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863041/04_s8l8dy.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863040/07_jrnhvd.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863040/05_sty1kz.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863039/01_qwhl8a.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1769863039/06_mk52qt.jpg',
     ];
 
     // Create image sets of 4 images each for the 2-row bento grid
@@ -356,8 +362,8 @@ const NeoVillaPage = () => {
                     Your browser does not support the video tag.
                 </video>
 
-                {/* Black Overlay */}
-                <div className="absolute inset-0 bg-black/60"></div>
+                {/* Lighter Overlay for better video visibility */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/40"></div>
 
                 {/* Main Content */}
                 <div className="relative z-10 h-full flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
@@ -495,7 +501,7 @@ const NeoVillaPage = () => {
                             className="relative group overflow-hidden rounded-3xl"
                         >
                             <img
-                                src="https://res.cloudinary.com/dprafk917/image/upload/v1768230663/9f5dd90d-eb0b-451d-8d08-508c5f69f2c5_rjpdzh.avif"
+                                src="https://res.cloudinary.com/dprafk917/image/upload/v1769863039/01_qwhl8a.jpg"
                                 alt="Neo Retro Villa Exterior"
                                 className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105"
                             />
@@ -522,7 +528,7 @@ const NeoVillaPage = () => {
                                 className="relative group overflow-hidden rounded-3xl"
                             >
                                 <img
-                                    src="https://res.cloudinary.com/dprafk917/image/upload/v1768230664/91a15ba5-b5da-4618-b585-5d7f92fa5df3_yqcadt.avif"
+                                    src="https://res.cloudinary.com/dprafk917/image/upload/v1769863054/03.1_c7vcel.jpg"
                                     alt="Neo Retro Villa Interior"
                                     className="w-full h-[190px] md:h-[235px] object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
@@ -535,7 +541,7 @@ const NeoVillaPage = () => {
                                 className="relative group overflow-hidden rounded-3xl"
                             >
                                 <img
-                                    src="https://res.cloudinary.com/dprafk917/image/upload/v1768230663/a613a1b2-edef-4242-8ee3-79ce77bae0e1_yi24hq.avif"
+                                    src="https://res.cloudinary.com/dprafk917/image/upload/v1769863047/29_qtp6zr.jpg"
                                     alt="Neo Retro Villa Pool Area"
                                     className="w-full h-[190px] md:h-[235px] object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
@@ -940,7 +946,7 @@ const NeoVillaPage = () => {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
-                        src="https://res.cloudinary.com/dprafk917/image/upload/v1768248895/7_c3uz2f.avif"
+                        src="https://res.cloudinary.com/dprafk917/image/upload/v1769863046/19_jxrtxx.jpg"
                         alt="Neo-Retro Villa Background"
                         className="w-full h-full object-cover"
                     />

@@ -27,13 +27,13 @@ const Navbar = () => {
 
   const villas = [
     {
-      name: 'Viswa Villa',
+      name: 'Retro Visawa',
       image: '/images/Retro-Viswa-lonawala.png',
       tagline: 'Vintage charm meets modern luxury',
-      path: '/'
+      path: '/viswa-villa'
     },
     {
-      name: 'Neo Villa',
+      name: 'Neo Retro Villa',
       image: '/images/neo.webp',
       tagline: 'Contemporary design with classic comfort',
       path: '/neo-villa'
@@ -42,7 +42,7 @@ const Navbar = () => {
       name: 'Retro Villa',
       image: '/images/retro-image.webp',
       tagline: 'Timeless elegance with classic comfort',
-      path: '/'
+      path: '/retro-villa'
     }
   ];
 
