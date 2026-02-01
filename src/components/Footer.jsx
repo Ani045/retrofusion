@@ -32,9 +32,9 @@ const Footer = () => {
   ];
 
   const legalLinks = [
-    { name: 'Cancellation Policy', path: '/' },
-    { name: 'Privacy Policy', path: '/' },
-    { name: 'Terms & Conditions', path: '/' },
+    { name: 'Cancellation Policy', path: '/cancellation-policy' },
+    { name: 'Privacy Policy', path: '/privacy-policy' },
+    { name: 'Terms & Conditions', path: '/terms-conditions' },
   ];
 
   const villaLinks = [

@@ -12,6 +12,9 @@ import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Contact from './pages/Contact';
 import Policies from './pages/Policies';
+import TermsConditions from './pages/TermsConditions';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import CancellationPolicy from './pages/CancellationPolicy';
 import './App.css';
 
 function App() {
@@ -30,6 +33,9 @@ function App() {
           <Route path="/blog/:postId" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/policies" element={<Policies />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cancellation-policy" element={<CancellationPolicy />} />
         </Routes>
         <Footer />
       </div>

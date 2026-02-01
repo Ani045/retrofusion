@@ -28,20 +28,20 @@ const Navbar = () => {
   const villas = [
     {
       name: 'Retro Visawa',
-      image: '/images/Retro-Viswa-lonawala.png',
-      tagline: 'Vintage charm meets modern luxury',
+      image: 'https://res.cloudinary.com/dprafk917/video/upload/so_2/v1769858399/8wr207mfxnrmy0cvd61bd2gn1g_result__viprl7.jpg',
+      tagline: 'Spacious 4BHK with private pool for groups',
       path: '/viswa-villa'
     },
     {
       name: 'Neo Retro Villa',
-      image: '/images/neo.webp',
-      tagline: 'Contemporary design with classic comfort',
+      image: 'https://res.cloudinary.com/dprafk917/video/upload/so_2/v1768241694/1874704f-2b23-41a2-aa21-ca77ce4aaecd_ipao9k.jpg',
+      tagline: 'Artistic retreat with jacuzzi & mountain views',
       path: '/neo-villa'
     },
     {
       name: 'Retro Villa',
-      image: '/images/retro-image.webp',
-      tagline: 'Timeless elegance with classic comfort',
+      image: 'https://res.cloudinary.com/dprafk917/video/upload/so_3/v1769867671/final_nkd4ry.jpg',
+      tagline: 'Vintage escape with plunge pool & terrace',
       path: '/retro-villa'
     }
   ];
@@ -179,7 +179,7 @@ const Navbar = () => {
         </AnimatePresence>
       </motion.nav>
 
-      {/* Desktop Mega Menu */}
+      {/* Desktop Mega Menu - Constrained Width with Border Radius */}
       <AnimatePresence>
         {showMegaMenu && (
           <motion.div
@@ -187,34 +187,72 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="fixed top-16 sm:top-20 left-0 right-0 z-40 bg-white shadow-xl border-t border-stone-200"
+            className="fixed top-16 sm:top-20 left-0 right-0 z-40 flex justify-center px-4 sm:px-6 lg:px-8"
             onMouseEnter={() => setShowMegaMenu(true)}
             onMouseLeave={() => setShowMegaMenu(false)}
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {villas.map((villa) => (
-                  <Link
-                    key={villa.name}
-                    to={villa.path}
-                    className="group block"
-                  >
-                    <div className="relative overflow-hidden rounded-lg mb-4">
-                      <img
-                        src={villa.image}
-                        alt={villa.name}
-                        className="w-full h-32 sm:h-40 md:h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-semibold text-stone-800 group-hover:text-amber-600 transition-colors">
-                      {villa.name}
+            <div className="w-full max-w-7xl bg-white shadow-2xl border border-stone-200 rounded-2xl overflow-hidden">
+              <div className="px-6 sm:px-8 lg:px-10 py-6 sm:py-8">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-stone-800" style={{ fontFamily: "'Marcellus', serif" }}>
+                      Our <span className="text-amber-600">Villas</span>
                     </h3>
-                    <p className="text-sm sm:text-base text-stone-600 mt-1">
-                      {villa.tagline}
-                    </p>
+                    <p className="text-stone-500 text-sm mt-1">Discover our curated collection of luxury stays</p>
+                  </div>
+                  <Link
+                    to="/about"
+                    className="text-amber-600 hover:text-amber-700 text-sm font-medium flex items-center gap-1 transition-colors"
+                  >
+                    View all
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                   </Link>
-                ))}
+                </div>
+
+                {/* Villa Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-6">
+                  {villas.map((villa) => (
+                    <Link
+                      key={villa.name}
+                      to={villa.path}
+                      className="group block"
+                    >
+                      <div className="relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-500">
+                        {/* Image */}
+                        <div className="relative h-40 sm:h-44 md:h-48 overflow-hidden">
+                          <img
+                            src={villa.image}
+                            alt={villa.name}
+                            className="w-full h-full object-cover scale-110 transition-transform duration-700 group-hover:scale-125"
+                          />
+                          {/* Gradient Overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent group-hover:from-black/85 transition-colors duration-300" />
+
+                          {/* Villa Info on Image */}
+                          <div className="absolute bottom-0 left-0 right-0 p-4">
+                            <h4 className="text-lg lg:text-xl font-bold text-white mb-0.5 group-hover:text-amber-300 transition-colors" style={{ fontFamily: "'Marcellus', serif" }}>
+                              {villa.name}
+                            </h4>
+                            <p className="text-white/80 text-xs font-light">
+                              {villa.tagline}
+                            </p>
+
+                            {/* Explore Button */}
+                            <div className="mt-2 flex items-center gap-1.5 text-amber-400 text-xs font-medium opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                              <span>Explore</span>
+                              <svg className="w-3 h-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>

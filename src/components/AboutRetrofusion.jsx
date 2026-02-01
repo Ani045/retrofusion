@@ -38,7 +38,7 @@ const AboutRetrofusion = () => {
             About Retrofusion
           </h2>
           <p className="text-base sm:text-lg text-stone-500 max-w-2xl">
-            Where vintage charm meets modern luxury to create unforgettable experiences
+            Your home away from home in the hills of Lonavala
           </p>
         </div>
 
@@ -51,9 +51,7 @@ const AboutRetrofusion = () => {
             {/* Main Description */}
             <div variants={itemVariants}>
               <p className="text-lg leading-relaxed text-stone-700 mb-6">
-                We don't just offer stays—we craft experiences that become cherished memories.
-                Each villa in our collection tells a story of vintage charm reimagined for modern luxury,
-                creating intimate sanctuaries where time slows down and connections deepen.
+                Started as a passion project by a group of friends who fell in love with Lonavala's misty hills, Retrofusion is now home to three beautiful villas. We wanted to create spaces where families could gather, friends could reconnect, and couples could escape the city chaos.
               </p>
             </div>
 
@@ -66,7 +64,7 @@ const AboutRetrofusion = () => {
               </div>
               <div className="bg-stone-50 p-5 rounded-xl border border-stone-200">
                 <div className="text-3xl font-bold text-amber-600 mb-2">24/7</div>
-                <div className="text-sm text-stone-600">Concierge Service</div>
+                <div className="text-sm text-stone-600">Caretaker Support</div>
               </div>
 
             </div>
@@ -74,16 +72,16 @@ const AboutRetrofusion = () => {
             {/* Feature Cards */}
             <div className="space-y-4" variants={itemVariants}>
               <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-200">
-                <h3 className="font-bold text-stone-800 mb-2 text-lg">Our Heritage</h3>
+                <h3 className="font-bold text-stone-800 mb-2 text-lg">What Makes Us Different</h3>
                 <p className="text-stone-600 text-base leading-relaxed">
-                  Preserving architectural legacy while embracing modern comforts for discerning travelers.
+                  We live in Lonavala. We know the best chai spots, the hidden viewpoints, and we're always a call away if you need anything during your stay.
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-stone-50 to-stone-100 p-6 rounded-xl border border-stone-200">
-                <h3 className="font-bold text-stone-800 mb-2 text-lg">Curated Experiences</h3>
+                <h3 className="font-bold text-stone-800 mb-2 text-lg">Perfect For</h3>
                 <p className="text-stone-600 text-base leading-relaxed">
-                  Every detail thoughtfully designed to create unforgettable moments and connections.
+                  Birthday celebrations, anniversary getaways, family reunions, corporate offsites, or just a weekend away with your loved ones.
                 </p>
               </div>
             </div>
@@ -99,8 +97,8 @@ const AboutRetrofusion = () => {
               {/* Top Left - Tall */}
               <div className="row-span-2 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img
-                  src="/images/gallery/Retrofusion1.jpg"
-                  alt="Retrofusion Villa 1"
+                  src="https://res.cloudinary.com/dprafk917/image/upload/v1769863039/01_qwhl8a.jpg"
+                  alt="Neo Villa Living Area"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -108,8 +106,8 @@ const AboutRetrofusion = () => {
               {/* Top Right */}
               <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img
-                  src="/images/gallery/image2.jpg"
-                  alt="Retrofusion Villa 2"
+                  src="https://res.cloudinary.com/dprafk917/image/upload/v1769868143/M01_jjmwdw.webp"
+                  alt="Retro Villa Pool"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -117,26 +115,12 @@ const AboutRetrofusion = () => {
               {/* Bottom Right */}
               <div className="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <img
-                  src="/images/gallery/image4.jpg"
-                  alt="Retrofusion Villa 3"
+                  src="https://res.cloudinary.com/dprafk917/image/upload/v1769862646/pool_ckwldd.png"
+                  alt="Visawa Villa Pool"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
-
-            {/* Decorative Quote */}
-            {/* <div
-              className="mt-6 bg-white p-6 rounded-xl shadow-md border-l-4 border-amber-500"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              <p className="text-stone-700 italic text-base leading-relaxed">
-                "Every corner has a story, every moment, a memory"
-              </p>
-              <p className="text-amber-700 font-semibold mt-2 text-sm text-right">
-                — The Retrofusion Team
-              </p>
-            </div> */}
           </div>
 
         </div>

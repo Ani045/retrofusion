@@ -2,13 +2,12 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-// Banner images from Cloudinary
+// Banner images from Cloudinary - Hero snapshots from each villa
 const bannerImages = [
-  'https://res.cloudinary.com/dprafk917/image/upload/v1768230663/9f5dd90d-eb0b-451d-8d08-508c5f69f2c5_rjpdzh.avif',
-  'https://res.cloudinary.com/dprafk917/image/upload/v1768230663/a613a1b2-edef-4242-8ee3-79ce77bae0e1_yi24hq.avif',
-  'https://res.cloudinary.com/dprafk917/image/upload/v1768230663/5d93e66d-23b4-4578-bb58-35032b8b39b8_cftv5v.avif',
-  'https://res.cloudinary.com/dprafk917/image/upload/v1768230664/91a15ba5-b5da-4618-b585-5d7f92fa5df3_yqcadt.avif',
-  'https://res.cloudinary.com/dprafk917/image/upload/v1768230663/10b87900-0a8b-418e-9273-d5a11d7732af_diomuk.avif',
+  'https://res.cloudinary.com/dprafk917/video/upload/so_2/v1768241694/1874704f-2b23-41a2-aa21-ca77ce4aaecd_ipao9k.jpg', // Neo-Retro Villa video snapshot
+  'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/B30_yc8rqu.webp', // Retro Villa room
+  'https://res.cloudinary.com/dprafk917/video/upload/so_2/v1769858399/8wr207mfxnrmy0cvd61bd2gn1g_result__viprl7.jpg', // Retro Visawa video snapshot
+  'https://res.cloudinary.com/dprafk917/image/upload/v1769863039/01_qwhl8a.jpg', // Neo-Retro Villa gallery
 ];
 
 // Villa data for bottom links
@@ -203,7 +202,7 @@ const HeroSection = () => {
           <img
             src={bannerImages[currentIndex]}
             alt={`Retrofusion Homestay ${currentIndex + 1}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-125"
           />
         </div>
 
@@ -220,7 +219,7 @@ const HeroSection = () => {
             <img
               src={bannerImages[prevIndex]}
               alt={`Retrofusion Homestay ${prevIndex + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover scale-125"
             />
           </div>
         )}

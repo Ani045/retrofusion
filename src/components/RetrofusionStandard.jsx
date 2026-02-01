@@ -1,9 +1,12 @@
 import React from "react";
 
 const sliderImages = [
-    "/images/gallery/Retrofusion1.jpg",
-    "/images/gallery/image2.jpg",
-    "/images/gallery/image4.jpg",
+    // Retro Villa pool
+    "https://res.cloudinary.com/dprafk917/image/upload/v1769863054/03.1_c7vcel.jpg", // Neo Villa interior
+    "https://res.cloudinary.com/dprafk917/image/upload/v1769862646/pool_ckwldd.png", // Visawa pool
+    "https://res.cloudinary.com/dprafk917/image/upload/v1769863047/20_haycpz.jpg", // Neo Villa bedroom
+    "https://res.cloudinary.com/dprafk917/image/upload/v1769868140/B30_yc8rqu.webp",
+
 ];
 
 // Inline SVG Icons

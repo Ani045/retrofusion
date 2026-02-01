@@ -21,11 +21,8 @@ const VillaCard = ({ image, name, location, guests, bedrooms, description }) => 
         className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
 
-      {/* Base Luxury Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/40 to-black/60" />
-
-      {/* Enhanced Luxury Overlay on Hover */}
-      <div className={`absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80 transition-opacity duration-700 ${isHovered ? 'opacity-100' : 'opacity-0'}`} />
+      {/* Subtle bottom gradient for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
       {/* Villa Name - Always Visible */}
       <div className="absolute bottom-8 left-8">
@@ -90,7 +87,7 @@ const FeaturedProperties = () => {
       guests: 12,
       bedrooms: 4,
       description: "Step into vintage charm with modern luxury. Features classic architecture with contemporary amenities.",
-      image: "/images/retro.webp"
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1769938782/Screenshot_2026-02-01_at_3.08.52_PM_mb4joq.png"
     },
     {
       id: 2,
@@ -99,16 +96,16 @@ const FeaturedProperties = () => {
       guests: 8,
       bedrooms: 3,
       description: "Contemporary design meets timeless comfort. Perfect blend of modern aesthetics and cozy elegance.",
-      image: "/images/neo.webp"
+      image: "https://res.cloudinary.com/dprafk917/video/upload/so_2/v1768241694/1874704f-2b23-41a2-aa21-ca77ce4aaecd_ipao9k.jpg"
     },
     {
       id: 3,
-      name: "Visawa Villa",
+      name: "Retro Visawa",
       location: "Lonavala",
       guests: 15,
       bedrooms: 5,
       description: "Serene escape surrounded by nature. Spacious villa offering tranquil moments and premium amenities.",
-      image: "/images/Retro-Viswa-lonawala.png"
+      image: "https://res.cloudinary.com/dprafk917/video/upload/so_2/v1769858399/8wr207mfxnrmy0cvd61bd2gn1g_result__viprl7.jpg"
     }
   ];
 
@@ -156,7 +153,7 @@ const FeaturedProperties = () => {
               className="text-lg text-stone-600 max-w-2xl leading-relaxed"
               variants={itemVariants}
             >
-              Discover our collection of meticulously curated luxury villas, where every detail speaks of refined elegance.
+              Discover our luxury villas
             </p>
           </div>
 
