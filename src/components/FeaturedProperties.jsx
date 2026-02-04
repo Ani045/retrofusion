@@ -87,7 +87,7 @@ const FeaturedProperties = () => {
       guests: 12,
       bedrooms: 4,
       description: "Step into vintage charm with modern luxury. Features classic architecture with contemporary amenities.",
-      image: "https://res.cloudinary.com/dprafk917/image/upload/v1769938782/Screenshot_2026-02-01_at_3.08.52_PM_mb4joq.png"
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1770226534/N36_om6t9d.jpg"
     },
     {
       id: 2,
@@ -105,7 +105,7 @@ const FeaturedProperties = () => {
       guests: 15,
       bedrooms: 5,
       description: "Serene escape surrounded by nature. Spacious villa offering tranquil moments and premium amenities.",
-      image: "https://res.cloudinary.com/dprafk917/video/upload/so_2/v1769858399/8wr207mfxnrmy0cvd61bd2gn1g_result__viprl7.jpg"
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1770225615/8492832a-d4f1-4821-90d7-8ebaf7c90dce_mbiuqk.png"
     }
   ];
 

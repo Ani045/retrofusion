@@ -269,7 +269,7 @@ const NeoVillaPage = () => {
         subtitle: 'An Artistic Retreat',
         description: 'Discover the seamless blend of art, luxury, and nature at Neo-Retro Villa, Retrofusion\'s crown jewel nestled in the tranquil landscape of Lonavala. This spacious 4 BHK Villa in Lonavala with Swimming Pool is not just a place to stay; it\'s an immersive experience designed for art lovers, romantics, and those seeking a serene escape.',
         longDescription: 'Experience the sublime fusion of art, luxury, and nature in Khandala\'s serene backdrop. An artistically themed villa with state-of-the-art amenities & scenic views, offering mesmerising mountain landscapes, comfort & luxury with themed bedrooms, jacuzzi, steam bath, and plunge pool.',
-        heroImage: '/images/neo.webp',
+        heroImage: 'https://res.cloudinary.com/dprafk917/image/upload/v1769863039/01_qwhl8a.jpg',
         heroVideo: 'https://res.cloudinary.com/dprafk917/video/upload/v1768241694/1874704f-2b23-41a2-aa21-ca77ce4aaecd_ipao9k.mp4',
         guests: '10-12',
         bedrooms: '4',

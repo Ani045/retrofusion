@@ -13,11 +13,11 @@ const BentoGallery = () => {
     const [lightboxIndex, setLightboxIndex] = useState(0);
 
     const allImages = [
-        'https://res.cloudinary.com/dprafk917/video/upload/so_3/v1769867671/final_nkd4ry.jpg',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1770226533/N34_stewru.jpg',
         'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/B30_yc8rqu.webp',
         'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/C26_j6pstx.webp',
         'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/05_ivb2yz.webp',
-        'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/04_dztuhq.webp',
+        'https://res.cloudinary.com/dprafk917/image/upload/v1770226534/N36_om6t9d.jpg',
         'https://res.cloudinary.com/dprafk917/image/upload/v1769868155/M08_qewdva.webp',
         'https://res.cloudinary.com/dprafk917/image/upload/v1769868143/M01_jjmwdw.webp',
         'https://res.cloudinary.com/dprafk917/image/upload/v1769868142/G31_mdlfjh.webp',
@@ -165,7 +165,7 @@ const RetroVillaPage = () => {
         subtitle: 'A Vintage Escape',
         description: 'Explore the best villa near Lonavala, featuring private plunge pool and bespoke amenities designed for your comfort and enjoyment.',
         longDescription: 'From the enchanting Retro Villa to the artistic Neo-Retro Villa, immerse yourself in spaces where every detail is crafted for luxury, relaxation, and a genuine connection with art with the best homestay near Mumbai.',
-        heroImage: 'https://res.cloudinary.com/dprafk917/video/upload/so_3/v1769867671/final_nkd4ry.jpg',
+        heroImage: 'https://res.cloudinary.com/dprafk917/image/upload/v1770226533/N34_stewru.jpg',
         heroVideo: 'https://res.cloudinary.com/dprafk917/video/upload/v1769867671/final_nkd4ry.mp4',
         guests: '8-10',
         bedrooms: '4',
@@ -240,7 +240,7 @@ const RetroVillaPage = () => {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                         <div className="relative group overflow-hidden rounded-3xl">
-                            <img src="https://res.cloudinary.com/dprafk917/video/upload/so_3/v1769867671/final_nkd4ry.jpg" alt="Retro Villa Exterior" className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" />
+                            <img src="https://res.cloudinary.com/dprafk917/image/upload/v1770226533/N34_stewru.jpg" alt="Retro Villa Exterior" className="w-full h-[400px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-105" />
                         </div>
                         <div className="grid grid-rows-2 gap-6">
                             <div className="relative group overflow-hidden rounded-3xl">
