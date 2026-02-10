@@ -166,7 +166,7 @@ const RetroVillaPage = () => {
         description: 'Explore the best villa near Lonavala, featuring private plunge pool and bespoke amenities designed for your comfort and enjoyment.',
         longDescription: 'From the enchanting Retro Villa to the artistic Neo-Retro Villa, immerse yourself in spaces where every detail is crafted for luxury, relaxation, and a genuine connection with art with the best homestay near Mumbai.',
         heroImage: 'https://res.cloudinary.com/dprafk917/image/upload/v1770226533/N34_stewru.jpg',
-        heroVideo: 'https://res.cloudinary.com/dprafk917/video/upload/v1769867671/final_nkd4ry.mp4',
+        heroVideo: 'https://res.cloudinary.com/dprafk917/video/upload/v1770699275/Untitled_design_1_cner56.mp4',
         guests: '8-10',
         bedrooms: '4',
         bathrooms: '4',

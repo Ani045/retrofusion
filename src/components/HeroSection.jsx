@@ -2,12 +2,12 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-// Banner images from Cloudinary - Hero snapshots from each villa
+// Banner images from Cloudinary - Lonavala views & villa interiors
 const bannerImages = [
-  'https://res.cloudinary.com/dprafk917/video/upload/so_2/v1768241694/1874704f-2b23-41a2-aa21-ca77ce4aaecd_ipao9k.jpg', // Neo-Retro Villa video snapshot
-  'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/B30_yc8rqu.webp', // Retro Villa room
-  'https://res.cloudinary.com/dprafk917/video/upload/so_2/v1769858399/8wr207mfxnrmy0cvd61bd2gn1g_result__viprl7.jpg', // Retro Visawa video snapshot
-  'https://res.cloudinary.com/dprafk917/image/upload/v1769863039/01_qwhl8a.jpg', // Neo-Retro Villa gallery
+  'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/B30_yc8rqu.webp', // Retro Villa interior
+  'https://res.cloudinary.com/dprafk917/image/upload/v1769868140/C26_j6pstx.webp', // Lonavala view
+  'https://res.cloudinary.com/dprafk917/image/upload/v1769863044/14_w8imzc.jpg', // Villa features
+  'https://res.cloudinary.com/dprafk917/image/upload/v1769863051/08.2_ws3oiy.jpg', // Neo-Retro Villa interior
 ];
 
 // Villa data for bottom links

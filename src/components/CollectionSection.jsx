@@ -1,66 +1,78 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 // Data Structure: Organized by COLUMNS to ensure vertical alignment control
+// All images and titles are project-related (Retrofusion homestay villas)
 const columnsData = [
   // Column 1: Tall Top, Short Bottom
   [
     {
       id: 1,
-      title: "Villas",
-      image: "/images/retro-image.webp",
-      heightType: "tall", // 60% height
-      tag: "Introducing" // Optional tag like in screenshot
+      title: "Retro Villa",
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1770226533/N34_stewru.jpg",
+      heightType: "tall",
+      tag: "Featured",
+      link: "/retro-villa"
     },
     {
       id: 2,
-      title: "Wellness Retreats",
-      image: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&h=600&fit=crop",
-      heightType: "short", // 40% height
+      title: "Private Pool",
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1769863054/03.1_c7vcel.jpg",
+      heightType: "short",
+      link: "/retro-villa"
     }
   ],
   // Column 2: Short Top, Tall Bottom
   [
     {
       id: 3,
-      title: "Private Pool",
-      image: "/images/gallery/Retrofusion1.jpg",
+      title: "Mountain Views",
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1769868140/B30_yc8rqu.webp",
       heightType: "short",
+      link: "/retro-villa"
     },
     {
       id: 4,
-      title: "Off-beat Getaway",
-      image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop",
+      title: "Neo-Retro Villa",
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1769863039/01_qwhl8a.jpg",
       heightType: "tall",
+      tag: "Artistic Retreat",
+      link: "/neo-retro-villa"
     }
   ],
   // Column 3: Tall Top, Short Bottom
   [
     {
       id: 5,
-      title: "1 Bedroom Offerings",
-      image: "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&h=600&fit=crop",
+      title: "Retro Visawa",
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1769862646/pool_ckwldd.png",
       heightType: "tall",
+      tag: "Group Getaway",
+      link: "/retro-visawa"
     },
     {
       id: 6,
-      title: "Senior Citizen-Friendly",
-      image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800&h=600&fit=crop",
+      title: "Pet-Friendly Stays",
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1769868142/G31_mdlfjh.webp",
       heightType: "short",
+      link: "/retro-villa"
     }
   ],
   // Column 4: Short Top, Tall Bottom
   [
     {
       id: 7,
-      title: "Pet-friendly",
-      image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=600&fit=crop",
+      title: "Vintage Interiors",
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1769863043/08.1_cth2qs.jpg",
       heightType: "short",
+      link: "/neo-retro-villa"
     },
     {
       id: 8,
-      title: "Event-friendly",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop",
+      title: "Lonavala Escape",
+      image: "https://res.cloudinary.com/dprafk917/image/upload/v1769863044/14_w8imzc.jpg",
       heightType: "tall",
+      link: "/retro-visawa"
     }
   ]
 ];
@@ -80,7 +92,7 @@ const CollectionSection = () => {
             Collections For You
           </h2>
           <p className="text-base sm:text-lg text-stone-500 max-w-2xl leading-relaxed">
-            Discover our curated collections of stunning villas for luxurious and unforgettable escapes!
+            Discover our curated collection of luxury villas in Lonavala for unforgettable homestay experiences!
           </p>
         </div>
 
@@ -98,9 +110,10 @@ const CollectionSection = () => {
                 style={{ scrollSnapAlign: 'start' }}
               >
                 {column.map((item) => (
-                  <div
+                  <Link
                     key={item.id}
-                    className={`relative w-full rounded-2xl overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300 border border-stone-200
+                    to={item.link}
+                    className={`relative w-full rounded-2xl overflow-hidden group cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300 border border-stone-200 block
                       ${item.heightType === 'tall' ? 'h-64' : 'h-48'}
                     `}
                   >
@@ -114,18 +127,13 @@ const CollectionSection = () => {
                     {/* Gradient Overlay for Text Readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
 
-                    {/* Optional Tag (like "Introducing") */}
-                    {item.tag && (
-                      <div className="absolute top-3 left-3 bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1.5 rounded-full border border-amber-200">
-                        {item.tag}
-                      </div>
-                    )}
+
 
                     {/* Text Content */}
                     <div className="absolute bottom-4 left-4 text-white">
                       <h3 className="text-lg font-bold font-display tracking-wide drop-shadow-lg">{item.title}</h3>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             ))}
@@ -144,10 +152,11 @@ const CollectionSection = () => {
               className="flex flex-col gap-6 h-[600px]"
             >
               {column.map((item) => (
-                <div
+                <Link
                   key={item.id}
+                  to={item.link}
                   className={`
-                    relative w-full rounded-3xl overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border border-stone-200
+                    relative w-full rounded-3xl overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-[1.02] border border-stone-200 block
                     ${item.heightType === 'tall' ? 'flex-[1.4]' : 'flex-1'}
                   `}
                   whileHover={{ y: -5 }}
@@ -163,18 +172,13 @@ const CollectionSection = () => {
                   {/* Gradient Overlay for Text Readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
 
-                  {/* Optional Tag (like "Introducing") */}
-                  {item.tag && (
-                    <div className="absolute top-4 left-4 bg-amber-100 text-amber-800 text-xs font-bold px-3 py-2 rounded-full border border-amber-200">
-                      {item.tag}
-                    </div>
-                  )}
+
 
                   {/* Text Content */}
                   <div className="absolute bottom-6 left-6 text-white">
                     <h3 className="text-xl md:text-2xl font-bold font-display tracking-wide drop-shadow-lg">{item.title}</h3>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           ))}
